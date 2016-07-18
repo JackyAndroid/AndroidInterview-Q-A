@@ -6,7 +6,7 @@ CSDN: http://blog.csdn.net/rain_butterfly
 
 ---
 
-# 国内一线互联网公司面试题和答案
+# 国内一线互联网公司内部面试题库
 
 ###一、java基础
 
@@ -40,7 +40,7 @@ http://blog.csdn.net/qy1387/article/details/7752973
 
 **6.列举java的集合和继承关系**
 
-
+![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/collection.png)
 
 **7.java虚拟机的特性**
 
@@ -75,14 +75,19 @@ Java 垃圾回收机制最基本的做法是分代回收。内存中的区域被
 http://blog.csdn.net/tiantiandjava/article/details/46988461
 
 **11.常见的排序算法时间复杂度**
-￼
+
+![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/algorithm.png)
 
 **12.HashMap的实现原理**（美团）
 
 1. HashMap概述：
    HashMap是基于哈希表的Map接口的非同步实现。此实现提供所有可选的映射操作，并允许使用null值和null键。此类不保证映射的顺序，特别是它不保证该顺序恒久不变。 
 2. HashMap的数据结构：
-	在java编程语言中，最基本的结构就是两种，一个是数组，另外一个是模拟指针（引用），所有的数据结构都可以用这两个基本结构来构造的，HashMap也不例外。HashMap实际上是一个“链表散列”的数据结构，即数组和链表的结合体。从上图中可以看出，HashMap底层就是一个数组结构，数组中的每一项又是一个链表。当新建一个HashMap的时候，就会初始化一个数组。
+	在java编程语言中，最基本的结构就是两种，一个是数组，另外一个是模拟指针（引用），所有的数据结构都可以用这两个基本结构来构造的，HashMap也不例外。HashMap实际上是一个“链表散列”的数据结构，即数组和链表的结合体。
+
+![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/hashmap.jpg)
+	
+从上图中可以看出，HashMap底层就是一个数组结构，数组中的每一项又是一个链表。当新建一个HashMap的时候，就会初始化一个数组。
 
 **13.java 状态机**
 
@@ -327,7 +332,7 @@ fragment 特点
 
 **5.描述一次网络请求的流程**
 
-￼
+￼![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/http.png)
 
 **6.Handler、Thread和HandlerThread的差别**
 
@@ -386,9 +391,11 @@ singleInstance应用场景：闹铃的响铃界面。 你以前设置了一个�
 http://hanhailong.com/2015/09/24/Android-%E4%B8%89%E5%BC%A0%E5%9B%BE%E6%90%9E%E5%AE%9ATouch%E4%BA%8B%E4%BB%B6%E4%BC%A0%E9%80%92%E6%9C%BA%E5%88%B6/
 
 **11.view绘制流程**
+
 http://www.codekk.com/blogs/detail/54cfab086c4761e5001b253f
 
 **12.多线程**
+
 * Activity.runOnUiThread(Runnable)
 * View.post(Runnable),View.postDelay(Runnable,long)
 * Handler
@@ -627,8 +634,7 @@ http://blog.csdn.net/coder_pig/article/details/47858489
 
 **29.fragment生命周期**
 
-￼
-
+![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/fragment-life.png)
 
 **30.volley解析**
 
@@ -644,6 +650,8 @@ http://frodoking.github.io/2015/10/10/android-glide/
 http://blog.csdn.net/bboyfeiyu/article/details/44563871
 
 **33.架构设计**
+
+![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/architucture.png)
 
 http://www.tianmaying.com/tutorial/AndroidMVC
 
