@@ -7,7 +7,9 @@ CSDN: http://blog.csdn.net/rain_butterfly
 ---
 
 # 国内一线互联网公司内部面试题库
+以下面试题来自于百度、小米、乐视、美团、58、猎豹、360、新浪、搜狐内部题库
 
+熟悉本文中列出的知识点会大大增加通过前两轮技术面试的几率。
 ###一、java基础
 
 **1.接口的意义**（百度）
@@ -28,29 +30,29 @@ CSDN: http://blog.csdn.net/rain_butterfly
 4. 内部类并没有令人迷惑的“is-a”关系，他就是一个独立的实体。
 5. 内部类提供了更好的封装，除了该外围类，其他类都不能访问
 
-**4.父类的静态方法能否被子类重写，为什么？**
+**4.父类的静态方法能否被子类重写，为什么？**（猎豹）
 
 不能
 
 子类继承父类后，用相同的静态方法和非静态方法，这时非静态方法覆盖父类中的方法（即方法重写），父类的该静态方法被隐藏（如果对象是父类则调用该隐藏的方法），另外子类可继承父类的静态与非静态方法，至于方法重载我觉得它其中一要素就是在同一类中，不能说父类中的什么方法与子类里的什么方法是方法重载的体现
 
-**5.举1-2个排序算法，并使用java代码实现**
+**5.举1-2个排序算法，并使用java代码实现**（美团）
 
 http://blog.csdn.net/qy1387/article/details/7752973
 
-**6.列举java的集合和继承关系**
+**6.列举java的集合和继承关系**（百度、美团）
 
 ![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/collection.png)
 
-**7.java虚拟机的特性**
+**7.java虚拟机的特性**（百度、乐视）
 
 Java语言的一个非常重要的特点就是与平台的无关性。而使用Java虚拟机是实现这一特点的关键。一般的高级语言如果要在不同的平台上运行，至少需要编译成不同的目标代码。而引入Java语言虚拟机后，Java语言在不同平台上运行时不需要重新编译。Java语言使用模式Java虚拟机屏蔽了与具体平台相关的信息，使得Java语言编译程序只需生成在Java虚拟机上运行的目标代码（字节码），就可以在多种平台上不加修改地运行。Java虚拟机在执行字节码时，把字节码解释成具体平台上的机器指令执行。
 
-**8.哪些情况下的对象会被垃圾回收机制处理掉**
+**8.哪些情况下的对象会被垃圾回收机制处理掉**（乐视、美团、小米）
 
 Java 垃圾回收机制最基本的做法是分代回收。内存中的区域被划分成不同的世代，对象根据其存活的时间被保存在对应世代的区域中。一般的实现是划分成3个世代：年轻、年老和永久。内存的分配是发生在年轻世代中的。当一个对象存活时间足够长的时候，它就会被复制到年老世代中。对于不同的世代可以使用不同的垃圾回收算法。进行世代划分的出发点是对应用中对象存活时间进行研究之后得出的统计规律。一般来说，一个应用中的大部分对象的存活时间都很短。比如局部变量的存活时间就只在方法的执行过程中。基于这一点，对于年轻世代的垃圾回收算法就可以很有针对性。
 
-**9.进程和线程的区别**
+**9.进程和线程的区别**（猎豹）
 
 简而言之,一个程序至少有一个进程,一个进程至少有一个线程。
 
@@ -70,11 +72,11 @@ Java 垃圾回收机制最基本的做法是分代回收。内存中的区域被
 
 进程和线程的主要差别在于它们是不同的操作系统资源管理方式。进程有独立的地址空间，一个进程崩溃后，在保护模式下不会对其它进程产生影响，而线程只是一个进程中的不同执行路径。线程有自己的堆栈和局部变量，但线程之间没有单独的地址空间，一个线程死掉就等于整个进程死掉，所以多进程的程序要比多线程的程序健壮，但在进程切换时，耗费资源较大，效率要差一些。但对于一些要求同时进行并且又要共享某些变量的并发操作，只能用线程，不能用进程。如果有兴趣深入的话，我建议你们看看《现代操作系统》或者《操作系统的设计与实现》。对就个问题说得比较清楚。
 
-**10.Java中==和equals的区别，equals和hashCode的区别**
+**10.Java中==和equals的区别，equals和hashCode的区别**（乐视）
 
 http://blog.csdn.net/tiantiandjava/article/details/46988461
 
-**11.常见的排序算法时间复杂度**
+**11.常见的排序算法时间复杂度**（小米）
 
 ![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/algorithm.png)
 
@@ -113,7 +115,7 @@ char 16 2
 
 http://www.cnblogs.com/shenliang123/archive/2011/10/27/2226903.html
 
-**16.string stringbuffer stringbuilder 区别**
+**16.string stringbuffer stringbuilder 区别**（小米、乐视、百度）
 
 String 字符串常量
 
@@ -155,7 +157,7 @@ java.lang.StringBuilder
 
 java.lang.StringBuilder一个可变的字符序列是5.0新增的。此类提供一个与 StringBuffer 兼容的 API，但不保证同步。该类被设计用作 StringBuffer 的一个简易替换，用在字符串缓冲区被单个线程使用的时候（这种情况很普遍）。如果可能，建议优先采用该类，因为在大多数实现中，它比 StringBuffer 要快。两者的方法基本相同
 
-**17.Java多态**
+**17.Java多态**（乐视）
 
 Java多态性理解
 
@@ -194,7 +196,7 @@ Java中多态性的实现
 
 Java中多态的实现方式：接口实现，继承父类进行方法重写，同一个类中进行方法重载。
 
-**18.什么导致线程阻塞**
+**18.什么导致线程阻塞**（58、美团）
 
 线程的阻塞
 
@@ -228,7 +230,7 @@ wait() 和 notify() 方法的上述特性决定了它们经常和synchronized �
 
 以上我们对 Java 中实现线程阻塞的各种方法作了一番分析，我们重点分析了 wait() 和 notify() 方法，因为它们的功能最强大，使用也最灵活，但是这也导致了它们的效率较低，较容易出错。实际使用中我们应该灵活使用各种方法，以便更好地达到我们的目的。
 
-**19.抽象类接口区别**
+**19.抽象类接口区别**（360）
 
 1. 默认的方法实现
 抽象类可以有默认的方法实现完全是抽象的。接口根本不存在方法的实现
@@ -264,17 +266,17 @@ wait() 和 notify() 方法的上述特性决定了它们经常和synchronized �
 如果你往抽象类中添加新的方法，你可以给它提供默认的实现。因此你不需要改变你现在的代码。	
 如果你往接口中添加方法，那么你必须改变实现该接口的类。
 
-**20.容器类之间的区别**
+**20.容器类之间的区别**（乐视、美团）
 
 http://www.cnblogs.com/yuanermen/archive/2009/08/05/1539917.html
 http://alexyyek.github.io/2015/04/06/Collection/
 http://tianmaying.com/tutorial/java_collection
 
-**21.java 内部类**
+**21.java 内部类**（小米）
 
 http://www.cnblogs.com/chenssy/p/3388487.html
 
-**22.Java中hashmap和hashtable的区别**
+**22.Java中hashmap和hashtable的区别**（乐视、小米）
 
 http://www.233.com/ncre2/JAVA/jichu/20100717/084230917.html
 
@@ -296,7 +298,7 @@ android系统下数据库应该存放在 /data/data/com.*.*（package name）/ �
 不用担心别的应用伪造广播，造成安全隐患。
 相比在系统内发送全局广播，它更高效。
 
-**3.是否使用过intentServer，作用是什么，AIDL解决了什么问题？**
+**3.是否使用过intentServer，作用是什么，AIDL解决了什么问题？**(小米)
 
     生成一个默认的且与主线程互相独立的工作者线程来执行所有传送至 onStartCommand() 方法的Intetnt。
     生成一个工作队列来传送Intent对象给你的onHandleIntent()方法，同一时刻只传送一个Intent对象，这样一来，你就不必担心多线程的问题。
@@ -307,7 +309,7 @@ android系统下数据库应该存放在 /data/data/com.*.*（package name）/ �
 AIDL (Android Interface Definition Language) 是一种IDL 语言，用于生成可以在Android设备上两个进程之间进行进程间通信(interprocess communication, IPC)的代码。如果在一个进程中（例如Activity）要调用另一个进程中（例如Service）对象的操作，就可以使用AIDL生成可序列化的参数。
 AIDL IPC机制是面向接口的，像COM或Corba一样，但是更加轻量级。它是使用代理类在客户端和实现端传递数据。
 
-**4.Activity、Window、View三者的差别，fragment的特点？**
+**4.Activity、Window、View三者的差别，fragment的特点？**（360）
 
 Activity像一个工匠（控制单元），Window像窗户（承载模型），View像窗花（显示视图）
 LayoutInflater像剪刀，Xml配置像窗花图纸。
@@ -330,11 +332,11 @@ fragment 特点
 * 在Activity运行过程中，可以添加、移除或者替换Fragment；
 * Fragment可以响应自己的输入事件，并且有自己的生命周期，它们的生命周期会受宿主Activity的生命周期影响。
 
-**5.描述一次网络请求的流程**
+**5.描述一次网络请求的流程**（新浪）
 
 ￼![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/http.png)
 
-**6.Handler、Thread和HandlerThread的差别**
+**6.Handler、Thread和HandlerThread的差别**（小米）
 
 http://blog.csdn.net/guolin_blog/article/details/9991569
 
@@ -344,11 +346,11 @@ http://droidyue.com/blog/2015/11/08/make-use-of-handlerthread/
 
 android.os.Handler可以通过Looper对象实例化，并运行于另外的线程中，Android提供了让Handler运行于其它线程的线程实现，也是就HandlerThread。HandlerThread对象start后可以获得其Looper对象，并且使用这个Looper对象实例Handler。
 
-**7.低版本SDK实现高版本api**
+**7.低版本SDK实现高版本api**（小米）
 
 自己实现或@TargetApi annotation
 
-**8.编译安卓系统**
+**8.编译安卓系统**（百度）
 
 1.创建一个大小写敏感的磁盘镜像文件
 2.首先你要安装的就是Xcode 
@@ -365,7 +367,7 @@ android.os.Handler可以通过Looper对象实例化，并运行于另外的线�
 13.设置必要的编译环境-编译
 14.利用Eclipse调试代码
 
-**9.launch mode应用场景**
+**9.launch mode应用场景**（百度、小米、乐视）
 
 standard，创建一个新的Activity。
 
@@ -386,22 +388,22 @@ singleTask适合作为程序入口点。
 例如浏览器的主界面。不管从多少个应用启动浏览器，只会启动主界面一次，其余情况都会走onNewIntent，并且会清空主界面上面的其他页面。
 singleInstance应用场景：闹铃的响铃界面。 你以前设置了一个闹铃：上午6点。在上午5点58分，你启动了闹铃设置界面，并按 Home 键回桌面；在上午5点59分时，你在微信和朋友聊天； 在6点时，闹铃响了，并且弹出了一个对话框形式的 Activity(名为 AlarmAlertActivity) 提示你到6点了(这个 Activity 就是以 SingleInstance 加载模式打开的)，你按返回键，回到的是微信的聊天界面，这是因为 AlarmAlertActivity 所在的 Task 的栈只有他一个元素， 因此退出之后这个 Task 的栈空了。如果是以 SingleTask 打开 AlarmAlertActivity，那么当闹铃响了的时候，按返回键应该进入闹铃设置界面。
 
-**10.touch 事件传递流程**
+**10.touch 事件传递流程**（小米）
 
 http://hanhailong.com/2015/09/24/Android-%E4%B8%89%E5%BC%A0%E5%9B%BE%E6%90%9E%E5%AE%9ATouch%E4%BA%8B%E4%BB%B6%E4%BC%A0%E9%80%92%E6%9C%BA%E5%88%B6/
 
-**11.view绘制流程**
+**11.view绘制流程**（百度）
 
 http://www.codekk.com/blogs/detail/54cfab086c4761e5001b253f
 
-**12.多线程**
+**12.多线程**（360）
 
 * Activity.runOnUiThread(Runnable)
 * View.post(Runnable),View.postDelay(Runnable,long)
 * Handler
 * AsyncTask
 
-**13.线程同步**
+**13.线程同步**（百度）
 
 http://www.itzhai.com/java-based-notebook-thread-synchronization-problem-solving-synchronization-problems-synchronized-block-synchronized-methods.html#read-more
 
@@ -425,7 +427,7 @@ public static Singleton getInstance(){
   }
 }
 ```
-**14.什么情况导致内存泄漏**
+**14.什么情况导致内存泄漏**（美团）
 
 1.资源对象没关闭造成的内存泄漏
 
@@ -517,7 +519,7 @@ Android系统会监控程序的响应状况，一旦出现下面两种情况，�
 * BroadcastReceiver中onReceive代码也要尽量减少耗时，建议使用IntentService处理。
 
 
-**16.什么情况导致oom**
+**16.什么情况导致oom**（乐视、美团）
 
 http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0920/3478.html
 
@@ -537,7 +539,7 @@ http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0920/3478.html
 
 http://blog.csdn.net/lijun952048910/article/details/7980562
 
-**19. Android代码中实现WAP方式联网**
+**19. Android代码中实现WAP方式联网**（360）
 
 http://blog.csdn.net/asce1885/article/details/7844159
 
@@ -574,7 +576,7 @@ service +broadcast  方式，就是当service走ondestory的时候，发送一�
 
 通过系统的一些广播，比如：手机重启、界面唤醒、应用状态改变等等监听并捕获到，然后判断我们的Service是否还存活，别忘记加权限啊。
 
-**21.Requestlayout，onlayout，onDraw，DrawChild区别与联系**
+**21.Requestlayout，onlayout，onDraw，DrawChild区别与联系**（猎豹）
 
 requestLayout()方法 ：会导致调用measure()过程 和 layout()过程 。
 说明：只是对View树重新布局layout过程包括measure()和layout()过程，不会调用draw()过程，但不会重新绘制
@@ -586,7 +588,7 @@ onLayout()方法(如果该View是ViewGroup对象，需要实现该方法，对�
 
 drawChild()去重新回调每个子视图的draw()方法
 
-**22.invalidate()和postInvalidate() 的区别及使用**
+**22.invalidate()和postInvalidate() 的区别及使用**（百度）
 
 http://blog.csdn.net/mars2639/article/details/6650876
 
@@ -594,11 +596,11 @@ http://blog.csdn.net/mars2639/article/details/6650876
 
 Animation框架定义了透明度，旋转，缩放和位移几种常见的动画，而且控制的是整个View，实现原理是每次绘制视图时View所在的ViewGroup中的drawChild函数获取该View的Animation的Transformation值，然后调用canvas.concat(transformToApply.getMatrix())，通过矩阵运算完成动画帧，如果动画没有完成，继续调用invalidate()函数，启动下次绘制来驱动动画，动画过程中的帧之间间隙时间是绘制函数所消耗的时间，可能会导致动画消耗比较多的CPU资源，最重要的是，动画改变的只是显示，并不能相应事件。
 
-**24.Android为每个应用程序分配的内存大小是多少？**
+**24.Android为每个应用程序分配的内存大小是多少？**（美团）
 
 android程序内存一般限制在16M，也有的是24M
 
-**25.Android View刷新机制**
+**25.Android View刷新机制**（百度、美团）
 
 由ViewRoot对象的performTraversals()方法调用draw()方法发起绘制该View树，值得注意的是每次发起绘图时，并不会重新绘制每个View树的视图，而只会重新绘制那些“需要重绘”的视图，View类内部变量包含了一个标志位DRAWN，当该视图需要重绘时，就会为该View添加该标志位。
 
@@ -618,7 +620,7 @@ mView.draw()开始绘制，draw()方法实现的功能如下：
 3.在不影响层级深度的情况下,使用LinearLayout和FrameLayout而不是RelativeLayout。
 最后再思考一下文章开头那个矛盾的问题，为什么Google给开发者默认新建了个RelativeLayout，而自己却在DecorView中用了个LinearLayout。因为DecorView的层级深度是已知而且固定的，上面一个标题栏，下面一个内容栏。采用RelativeLayout并不会降低层级深度，所以此时在根节点上用LinearLayout是效率最高的。而之所以给开发者默认新建了个RelativeLayout是希望开发者能采用尽量少的View层级来表达布局以实现性能最优，因为复杂的View嵌套对性能的影响会更大一些。
 
-**27.优化自定义view**
+**27.优化自定义view**（百度、乐视、小米）
 
 为了加速你的view，对于频繁调用的方法，需要尽量减少不必要的代码。先从onDraw开始，需要特别注意不应该在这里做内存分配的事情，因为它会导致GC，从而导致卡顿。在初始化或者动画间隙期间做分配内存的动作。不要在动画正在执行的时候做内存分配的事情。
 
@@ -628,7 +630,7 @@ mView.draw()开始绘制，draw()方法实现的功能如下：
 
 如果你有一个复杂的UI，你应该考虑写一个自定义的ViewGroup来执行他的layout操作。与内置的view不同，自定义的view可以使得程序仅仅测量这一部分，这避免了遍历整个view的层级结构来计算大小。这个PieChart 例子展示了如何继承ViewGroup作为自定义view的一部分。PieChart 有子views，但是它从来不测量它们。而是根据他自身的layout法则，直接设置它们的大小。
 
-**28.ContentProvider**
+**28.ContentProvider**（乐视）
 
 http://blog.csdn.net/coder_pig/article/details/47858489
 
@@ -636,7 +638,7 @@ http://blog.csdn.net/coder_pig/article/details/47858489
 
 ![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/fragment-life.png)
 
-**30.volley解析**
+**30.volley解析**（美团、乐视）
 
 http://a.codekk.com/detail/Android/grumoon/Volley%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90
 
@@ -649,13 +651,13 @@ http://frodoking.github.io/2015/10/10/android-glide/
 
 http://blog.csdn.net/bboyfeiyu/article/details/44563871
 
-**33.架构设计**
+**33.架构设计**（搜狐）
 
 ![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/architucture.png)
 
 http://www.tianmaying.com/tutorial/AndroidMVC
 
-**34.Android属性动画特性**
+**34.Android属性动画特性**（乐视、小米）
 
 如果你的需求中只需要对View进行移动、缩放、旋转和淡入淡出操作，那么补间动画确实已经足够健全了。但是很显然，这些功能是不足以覆盖所有的场景的，一旦我们的需求超出了移动、缩放、旋转和淡入淡出这四种对View的操作，那么补间动画就不能再帮我们忙了，也就是说它在功能和可扩展方面都有相当大的局限性，那么下面我们就来看看补间动画所不能胜任的场景。
 
