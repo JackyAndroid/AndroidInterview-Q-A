@@ -10,3 +10,5 @@ CSDN: http://blog.csdn.net/rain_butterfly
 
 # AndroidInterview-Q-A
 The top Internet companies interview questions and answers
+
+english document will comming soon
