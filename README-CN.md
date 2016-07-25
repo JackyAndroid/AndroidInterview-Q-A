@@ -354,22 +354,14 @@ android.os.Handler可以通过Looper对象实例化，并运行于另外的线�
 
 自己实现或@TargetApi annotation
 
-**8.编译安卓系统**（百度）
+**8.Ubuntu编译安卓系统**（百度）
 
-1.创建一个大小写敏感的磁盘镜像文件
-2.首先你要安装的就是Xcode 
-3.从macports.org安装MacPorts工具
-4.从MacPorts安装make,git, and GPG packages
-5.修改文件标识符限制
-6.创建~/bin/目录
-7.安装repo
-8.设置repo可执行权限
-9.修改~/bin/repo文件将第五行
-10.新建目录gingerbread，并进入该目录
-11.执行repoinit
-12. reposync
-13.设置必要的编译环境-编译
-14.利用Eclipse调试代码
+1. 进入源码根目录
+2. . build/envsetup.sh
+3. lunch
+4. full(编译全部)
+5. userdebug(选择编译版本)
+6. make -j8(开启8个线程编译)
 
 **9.launch mode应用场景**（百度、小米、乐视）
 
@@ -380,17 +372,24 @@ singleTop，栈顶不是该类型的Activity，创建一个新的Activity。否�
 singleTask，回退栈中没有该类型的Activity，创建Activity，否则，onNewIntent+ClearTop。
 
 注意:
- 1.设置了"singleTask"启动模式的Activity，它在启动的时候，会先在系统中查找属性值affinity等于它的属性值taskAffinity的Task存在； 如果存在这样的Task，它就会在这个Task中启动，否则就会在新的任务栈中启动。因此， 如果我们想要设置了"singleTask"启动模式的Activity在新的任务中启动，就要为它设置一个独立的taskAffinity属性值。
- 2.如果设置了"singleTask"启动模式的Activity不是在新的任务中启动时，它会在已有的任务中查看是否已经存在相应的Activity实例， 如果存在，就会把位于这个Activity实例上面的Activity全部结束掉，即最终这个Activity 实例会位于任务的Stack顶端中。
- 3.在一个任务栈中只有一个”singleTask”启动模式的Activity存在。他的上面可以有其他的Activity。这点与singleInstance是有区别的。
+
+ 1. 设置了"singleTask"启动模式的Activity，它在启动的时候，会先在系统中查找属性值affinity等于它的属性值taskAffinity的Task存在； 如果存在这样的Task，它就会在这个Task中启动，否则就会在新的任务栈中启动。因此， 如果我们想要设置了"singleTask"启动模式的Activity在新的任务中启动，就要为它设置一个独立的taskAffinity属性值。
+ 2. 如果设置了"singleTask"启动模式的Activity不是在新的任务中启动时，它会在已有的任务中查看是否已经存在相应的Activity实例， 如果存在，就会把位于这个Activity实例上面的Activity全部结束掉，即最终这个Activity 实例会位于任务的Stack顶端中。
+ 3. 在一个任务栈中只有一个”singleTask”启动模式的Activity存在。他的上面可以有其他的Activity。这点与singleInstance是有区别的。
 
 singleInstance，回退栈中，只有这一个Activity，没有其他Activity。
 
 singleTop适合接收通知启动的内容显示页面。
+
 例如，某个新闻客户端的新闻内容页面，如果收到10个新闻推送，每次都打开一个新闻内容页面是很烦人的。
+
 singleTask适合作为程序入口点。
+
 例如浏览器的主界面。不管从多少个应用启动浏览器，只会启动主界面一次，其余情况都会走onNewIntent，并且会清空主界面上面的其他页面。
-singleInstance应用场景：闹铃的响铃界面。 你以前设置了一个闹铃：上午6点。在上午5点58分，你启动了闹铃设置界面，并按 Home 键回桌面；在上午5点59分时，你在微信和朋友聊天； 在6点时，闹铃响了，并且弹出了一个对话框形式的 Activity(名为 AlarmAlertActivity) 提示你到6点了(这个 Activity 就是以 SingleInstance 加载模式打开的)，你按返回键，回到的是微信的聊天界面，这是因为 AlarmAlertActivity 所在的 Task 的栈只有他一个元素， 因此退出之后这个 Task 的栈空了。如果是以 SingleTask 打开 AlarmAlertActivity，那么当闹铃响了的时候，按返回键应该进入闹铃设置界面。
+
+singleInstance应用场景：
+
+闹铃的响铃界面。 你以前设置了一个闹铃：上午6点。在上午5点58分，你启动了闹铃设置界面，并按 Home 键回桌面；在上午5点59分时，你在微信和朋友聊天；在6点时，闹铃响了，并且弹出了一个对话框形式的 Activity(名为 AlarmAlertActivity) 提示你到6点了(这个 Activity 就是以 SingleInstance 加载模式打开的)，你按返回键，回到的是微信的聊天界面，这是因为 AlarmAlertActivity 所在的 Task 的栈只有他一个元素， 因此退出之后这个 Task 的栈空了。如果是以 SingleTask 打开 AlarmAlertActivity，那么当闹铃响了的时候，按返回键应该进入闹铃设置界面。
 
 **10.touch 事件传递流程**（小米）
 
@@ -551,13 +550,13 @@ http://blog.csdn.net/asce1885/article/details/7844159
 
 一、onStartCommand方法，返回START_STICKY
 
-1、START_STICKY
+1. START_STICKY
 在运行onStartCommand后service进程被kill后，那将保留在开始状态，但是不保留那些传入的intent。不久后service就会再次尝试重新创建，因为保留在开始状态，在创建     service后将保证调用onstartCommand。如果没有传递任何开始命令给service，那将获取到null的intent。
 
-2、START_NOT_STICKY
+2. START_NOT_STICKY
 在运行onStartCommand后service进程被kill后，并且没有新的intent传递给它。Service将移出开始状态，并且直到新的明显的方法（startService）调用才重新创建。因为如果没有传递任何未决定的intent那么service是不会启动，也就是期间onstartCommand不会接收到任何null的intent。
 
-3、START_REDELIVER_INTENT
+3. START_REDELIVER_INTENT
 在运行onStartCommand后service进程被kill后，系统将会再次启动service，并传入最后一个intent给onstartCommand。直到调用stopSelf(int)才停止传递intent。如果在被kill后还有未处理好的intent，那被kill后服务还是会自动启动。因此onstartCommand不会接收到任何null的intent。
 
 二、提升service优先级
@@ -567,7 +566,14 @@ http://blog.csdn.net/asce1885/article/details/7844159
 三、提升service进程优先级
 
 Android中的进程是托管的，当系统进程空间紧张的时候，会依照优先级自动进行进程的回收。Android将进程分为6个等级,它们按优先级顺序由高到低依次是:
-   1.前台进程( FOREGROUND_APP)    2.可视进程(VISIBLE_APP )    3. 次要服务进程(SECONDARY_SERVER )    4.后台进程 (HIDDEN_APP)    5.内容供应节点(CONTENT_PROVIDER)    6.空进程(EMPTY_APP)
+
+1. 前台进程( FOREGROUND_APP)
+2. 可视进程(VISIBLE_APP )
+3. 次要服务进程(SECONDARY_SERVER )
+4. 后台进程 (HIDDEN_APP)
+5. 内容供应节点(CONTENT_PROVIDER)
+6. 空进程(EMPTY_APP)
+
 当service运行在低内存的环境时，将会kill掉一些存在的进程。因此进程的优先级将会很重要，可以使用startForeground 将service放到前台状态。这样在低内存时被kill的几率会低一些。
 
 四、onDestroy方法里重启service
@@ -619,9 +625,10 @@ mView.draw()开始绘制，draw()方法实现的功能如下：
 
 **26.LinearLayout对比RelativeLayout**（百度）
 
-1.RelativeLayout会让子View调用2次onMeasure，LinearLayout 在有weight时，也会调用子View2次onMeasure
-2.RelativeLayout的子View如果高度和RelativeLayout不同，则会引发效率问题，当子View很复杂时，这个问题会更加严重。如果可以，尽量使用padding代替margin。
-3.在不影响层级深度的情况下,使用LinearLayout和FrameLayout而不是RelativeLayout。
+1. RelativeLayout会让子View调用2次onMeasure，LinearLayout 在有weight时，也会调用子View2次onMeasure
+2. RelativeLayout的子View如果高度和RelativeLayout不同，则会引发效率问题，当子View很复杂时，这个问题会更加严重。如果可以，尽量使用padding代替margin。
+3. 在不影响层级深度的情况下,使用LinearLayout和FrameLayout而不是RelativeLayout。
+
 最后再思考一下文章开头那个矛盾的问题，为什么Google给开发者默认新建了个RelativeLayout，而自己却在DecorView中用了个LinearLayout。因为DecorView的层级深度是已知而且固定的，上面一个标题栏，下面一个内容栏。采用RelativeLayout并不会降低层级深度，所以此时在根节点上用LinearLayout是效率最高的。而之所以给开发者默认新建了个RelativeLayout是希望开发者能采用尽量少的View层级来表达布局以实现性能最优，因为复杂的View嵌套对性能的影响会更大一些。
 
 **27.优化自定义view**（百度、乐视、小米）
