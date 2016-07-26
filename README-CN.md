@@ -300,7 +300,7 @@ android系统下数据库应该存放在 /data/data/com.*.*（package name）/ �
 不用担心别的应用伪造广播，造成安全隐患。
 相比在系统内发送全局广播，它更高效。
 
-**3.是否使用过intentServer，作用是什么，AIDL解决了什么问题？**(小米)
+**3.是否使用过intentService，作用是什么，AIDL解决了什么问题？**(小米)
 
 生成一个默认的且与主线程互相独立的工作者线程来执行所有传送至onStartCommand() 方法的Intetnt。
 
