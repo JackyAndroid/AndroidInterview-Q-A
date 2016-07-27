@@ -9,8 +9,9 @@ CSDN: http://blog.csdn.net/rain_butterfly
 ---
 
 # AndroidInterview-Q-A
-The top Internet companies interview questions and answers
+The top Internet companies' interview questions and answers.
 
+<<<<<<< HEAD
 ###一、java
 
 **1.interface significance**
@@ -22,3 +23,6 @@ Specification、extension、Callback
 Provide a common type of its subclasses
 Encapsulation subclasses of duplicate content
 To define abstract methods
+=======
+An English version is coming soon
+>>>>>>> origin/master
