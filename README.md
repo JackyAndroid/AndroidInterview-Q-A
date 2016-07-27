@@ -11,4 +11,14 @@ CSDN: http://blog.csdn.net/rain_butterfly
 # AndroidInterview-Q-A
 The top Internet companies interview questions and answers
 
-english document will comming soon
+###一、java
+
+**1.interface significance**
+
+Specification、extension、Callback
+
+**2.The significance of an abstract class**
+
+Provide a common type of its subclasses
+Encapsulation subclasses of duplicate content
+To define abstract methods
