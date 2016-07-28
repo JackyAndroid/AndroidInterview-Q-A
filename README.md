@@ -33,7 +33,7 @@ Specification、extension、Callback
 4. Inner classes is not confusing "is - a"relationship, it is an independent entity.
 5. Inner class provides better encapsulation, in addition to the outer class, other class cannot access
 
-**4.Static methods can be subclasses override of the parent，why？**（猎豹）
+**4.Static methods can be subclasses override of the parent，why？**
 
 no
 
