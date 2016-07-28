@@ -5,6 +5,7 @@ GitHub: https://github.com/JackyAndroid
 CSDN: http://blog.csdn.net/rain_butterfly
 
 ---
+**本文已授权微信公众号AndroidDeveloper独家发布**
 
 # 国内一线互联网公司内部面试题库
 以下面试题来自于百度、小米、乐视、美团、58、猎豹、360、新浪、搜狐内部题库
