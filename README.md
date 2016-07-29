@@ -13,11 +13,13 @@ The top Internet companies' interview questions and answers.
 
 translating...
 
-###一、java
+###Java
 
-**1.interface significance**
+**1.Significance of Interface**
 
-Specification、extension、Callback
+- Specification
+- extension
+- Callback
 
 **2.The significance of an abstract class**
 
