@@ -35,29 +35,30 @@ translating...
 4. Inner classes is not confusing "is - a"relationship, it is an independent entity.
 5. Inner class provides better encapsulation, in addition to the outer class, other class cannot access
 
-**4.Static methods can be subclasses override of the parent，why？**
+**4.Does static method can be overriden？Why or why not?**
 
-no
+No we can't override static methods.
 
 Subclass inherits the parent class, use the same method of static and non-static methods, then non-static methods covered in the parent class method (namely rewriting), the static method of the parent is hidden (if the object is the parent class is called the hidden method), the other a subclass inherits the parent class of the static and non-static methods, as for the method overloading I think it is one of the elements in the same class, can't say what the parent class method and what method in a subclass is the embodiment of the method overloading
 
-**5.For 1-2 sorting algorithms, and implementation using Java code**
+**5.Major sorting algorithims and their implementation in Java.**
 
-http://blog.csdn.net/qy1387/article/details/7752973
+These can be found here in this blog - http://blog.csdn.net/qy1387/article/details/7752973
+P.S- If you don't understand chinese then please translate blog to your local language.
 
 **6.Enumerate the Java collection and inheritance relationships**
 
 ![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/collection.png)
 
-**7.The characteristics of the Java virtual machine**
+**7.What are the important characteristics of the Java virtual machine?**
 
 An important feature of the Java language is with platform independence.While using the Java virtual machine is the key to achieve this feature.The general high-level language if you want to run on different platforms, at least needs to be compiled into different object code.And after the introduction of Java virtual machine, the Java language runtime on different platforms do not need to recompile.Java language usage patterns Java virtual machine blocked information related to the specific platform, makes the Java language compiler to generate the Java virtual machine to run the target code (byte code), you can run on multiple platforms without modification.Java virtual machine when performing the bytecode, explain the bytecode into concrete platform machine instruction execution.
 
-**8.Which object will be rid of garbage collection**
+**8.Which object will be rid of garbage collection?**
 
 The Java garbage collection mechanism is the most basic way is to generational collection.In memory area is divided into different generations, object according to its survival time is saved in the corresponding generation area.The general implementation is divided into three generation: young, old and permanent.Memory allocation is occurred in the young generation.When an object survival time long enough, it will be copied to the older generation.For different generations can use different garbage collection algorithm.Divides the starting point is the generation of application objects to study the survival time of statistical rule.In general, an application of most objects in the survival of the time is very short.Such as the survival of the local variable time is only the execution of the method.Based on this, the young generation garbage collection algorithm can be targeted.
 
-**9.The difference between threads and processes**
+**9.What is the difference between threads and processes?**
 
 In short, a program of at least one process, a process of at least one thread.The thread dimension is less than the process of dividing, making high concurrency multithreaded program.In addition, the process is in the process of execution has an independent memory unit, and multiple threads to Shared memory, thus greatly improve the efficiency of the program.Threads in the process of execution and process or is there a difference.Each individual threads run a program entry, order execution sequence and the procedure of exports.But the threads will not be able to independently execute, must depend on application, provide multiple threads execute control by the application.From a logical point of view, a multithreaded significance lies in an application, there are multiple execution part can perform at the same time.But were not operating system with multiple threads as multiple independent applications, to realize the process of scheduling and management, and resource allocation.This is the important distinction between the threads and processes.Process is a certain independent function of the program on a run on one of the data collection activities, resource allocation and scheduling process is the system of an independent unit.Thread is a process of an entity, is the basic unit of the CPU scheduling and dispatching, which is smaller than the process of the basic unit of the can run independently. Thread basically does not own system resources, have only a little in operation of essential resources (such as the program counter, a set of registers and stack), but it can be to belong to a Shared other threads of a process possesses all the resources.A thread can be created and revoke another thread;Between the multiple threads in the same process can execute concurrently.Process and thread main difference is that they are the different ways of operating system resources management.Process has its own address space, a process after the collapse, in protected mode will not affect other processes, and in the process of the thread is just a different execution path.Thread has its own stack and local variables, but no single address space between thread, a thread die die is equal to the whole process, so the multi-process program than in a multithreaded program, but in the process of switching cost resources is bigger, the efficiency is less.But for some requirements and at the same time and again to share some of the variables of concurrent operation, can only use threads, cannot use process.If you are interested in further, I suggest you look at the modern operating systems or the design and implementation of the operating system.Said to is a problem more clearly.
 
@@ -65,7 +66,7 @@ In short, a program of at least one process, a process of at least one thread.Th
 
 http://blog.csdn.net/tiantiandjava/article/details/46988461
 
-**11.Common sort algorithm time complexity**
+**11.What are the time complexities of common sorting algorithms?**
 
 ![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/algorithm.png)
 
@@ -84,9 +85,9 @@ Can be seen from the diagram above, a HashMap the underlying structure is an arr
 
 http://www.jdon.com/designpatterns/designpattern_State.htm
 
-**14.Int in the Java char long each have how many bytes**
+**14.How many bits and bytes does each of short, int, long, char, float, double contains in Java?**
 
-byte digits 8 The number of bytes 1
+1 byte contains 8 bits
 
 short 16 2
 
@@ -100,7 +101,7 @@ double 64 8
 
 char 16 2
 
-**15.The difference between the Java int and an integer**
+**15.What is the difference between int and an Integer in Java?**
 
 http://www.cnblogs.com/shenliang123/archive/2011/10/27/2226903.html
 
