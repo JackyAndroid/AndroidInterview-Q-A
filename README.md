@@ -11,13 +11,7 @@ CSDN: http://blog.csdn.net/rain_butterfly
 # AndroidInterview-Q-A
 Some of the questions (along with their answers) related to android and java asked in top notch companies.
 
-<<<<<<< HEAD
-###一、java
-=======
-Translation is under process....
-
 ###Java
->>>>>>> origin/master
 
 **1.Significance of Interface**
 
