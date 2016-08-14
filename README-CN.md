@@ -23,7 +23,7 @@ CSDN: http://blog.csdn.net/rain_butterfly
 	* [java虚拟机的特性-百度-乐视](#java虚拟机的特性-百度-乐视)
 	* [哪些情况下的对象会被垃圾回收机制处理掉-美团-小米](#哪些情况下的对象会被垃圾回收机制处理掉-美团-小米)
 	* [进程和线程的区别-猎豹-美团](#进程和线程的区别-猎豹-美团)
-	* [==和equals的区别,equals和hashCode的区别-乐视](#==和equals和hashCode的区别-乐视)
+	* [==和equals和hashCode的区别-乐视](#java中==和equals和hashCode的区别-乐视)
 	* [常见的排序算法时间复杂度-小米](#常见的排序算法时间复杂度-小米)
 	* [HashMap的实现原理-美团](#HashMap的实现原理-美团)
 	* [java状态机](#java状态机)
@@ -36,7 +36,7 @@ CSDN: http://blog.csdn.net/rain_butterfly
 	* [容器类之间的区别-乐视-美团](#容器类之间的区别-乐视-美团)
 	* [内部类](#内部类)
 	* [hashmap和hashtable的区别-乐视-小米](#hashmap和hashtable的区别-乐视-小米)
-	* [ArrayMap对比HashMap](#ArrayMap对比HashMap)
+	* [ArrayMap对比HashMap](#arrayMap对比hashMap)
 * [安卓](#android)
 
 ###java
@@ -101,7 +101,7 @@ Java 垃圾回收机制最基本的做法是分代回收。内存中的区域被
 
 进程和线程的主要差别在于它们是不同的操作系统资源管理方式。进程有独立的地址空间，一个进程崩溃后，在保护模式下不会对其它进程产生影响，而线程只是一个进程中的不同执行路径。线程有自己的堆栈和局部变量，但线程之间没有单独的地址空间，一个线程死掉就等于整个进程死掉，所以多进程的程序要比多线程的程序健壮，但在进程切换时，耗费资源较大，效率要差一些。但对于一些要求同时进行并且又要共享某些变量的并发操作，只能用线程，不能用进程。如果有兴趣深入的话，我建议你们看看《现代操作系统》或者《操作系统的设计与实现》。对就个问题说得比较清楚。
 
-####==和equals和hashCode的区别-乐视
+####java中==和equals和hashCode的区别-乐视
 
 http://blog.csdn.net/tiantiandjava/article/details/46988461
 
