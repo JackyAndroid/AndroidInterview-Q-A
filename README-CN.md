@@ -19,24 +19,24 @@ CSDN: http://blog.csdn.net/rain_butterfly
 	* [内部类的作用-乐视](#内部类的作用-乐视)
 	* [父类的静态方法能否被子类重写-猎豹](#父类的静态方法能否被子类重写-猎豹)
 	* [java排序算法-美团](#java排序算法-美团)
-	* [列举java的集合和继承关系-百度/美团](#列举java的集合和继承关系-百度/美团)
-	* [java虚拟机的特性-百度/乐视](#java虚拟机的特性-百度/乐视)
-	* [哪些情况下的对象会被垃圾回收机制处理掉-美团/小米](#哪些情况下的对象会被垃圾回收机制处理掉-美团/小米)
-	* [进程和线程的区别-猎豹/美团](#进程和线程的区别-猎豹/美团)
-	* [Java中==和equals的区别,equals和hashCode的区别-乐视](#Java中==和equals的区别,equals和hashCode的区别-乐视)
+	* [列举java的集合和继承关系-百度-美团](#列举java的集合和继承关系-百度-美团)
+	* [java虚拟机的特性-百度-乐视](#java虚拟机的特性-百度-乐视)
+	* [哪些情况下的对象会被垃圾回收机制处理掉-美团-小米](#哪些情况下的对象会被垃圾回收机制处理掉-美团-小米)
+	* [进程和线程的区别-猎豹-美团](#进程和线程的区别-猎豹-美团)
+	* [==和equals的区别,equals和hashCode的区别-乐视](#==和equals和hashCode的区别-乐视)
 	* [常见的排序算法时间复杂度-小米](#常见的排序算法时间复杂度-小米)
 	* [HashMap的实现原理-美团](#HashMap的实现原理-美团)
 	* [java状态机](#java状态机)
-	* [java中int char long各占多少字节数](#java中int char long各占多少字节数)
-	* [java int与integer的区别](#java int与integer的区别)
-	* [string stringbuffer stringbuilder 区别-小米/乐视/百度](#string stringbuffer stringbuilder 区别-小米/乐视/百度)
+	* [int-char-long各占多少字节数](#int-char-long各占多少字节数)
+	* [int与integer的区别](#int与integer的区别)
+	* [string-stringbuffer-stringbuilder区别-小米-乐视-百度](#string-stringbuffer-stringbuilder区别-小米-乐视-百度)
 	* [java多态-乐视](#java多态-乐视)
-	* [什么导致线程阻塞-58/美团](#什么导致线程阻塞-58/美团)
+	* [什么导致线程阻塞-58-美团](#什么导致线程阻塞-58-美团)
 	* [抽象类接口区别-360](#抽象类接口区别-360)
-	* [容器类之间的区别-乐视/美团](#容器类之间的区别-乐视/美团)
-	* [java 内部类](#java 内部类)
-	* [java中hashmap和hashtable的区别-乐视/小米](#java中hashmap和hashtable的区别-乐视/小米)
-	* [ArrayMap VS HashMap](#ArrayMap VS HashMap)
+	* [容器类之间的区别-乐视-美团](#容器类之间的区别-乐视-美团)
+	* [内部类](#内部类)
+	* [hashmap和hashtable的区别-乐视-小米](#hashmap和hashtable的区别-乐视-小米)
+	* [ArrayMap对比HashMap](#ArrayMap对比HashMap)
 * [安卓](#android)
 
 ###java
@@ -69,19 +69,19 @@ CSDN: http://blog.csdn.net/rain_butterfly
 
 http://blog.csdn.net/qy1387/article/details/7752973
 
-####列举java的集合和继承关系-百度/美团
+####列举java的集合和继承关系-百度-美团
 
 ![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/collection.png)
 
-####java虚拟机的特性-百度/乐视
+####java虚拟机的特性-百度-乐视
 
 Java语言的一个非常重要的特点就是与平台的无关性。而使用Java虚拟机是实现这一特点的关键。一般的高级语言如果要在不同的平台上运行，至少需要编译成不同的目标代码。而引入Java语言虚拟机后，Java语言在不同平台上运行时不需要重新编译。Java语言使用模式Java虚拟机屏蔽了与具体平台相关的信息，使得Java语言编译程序只需生成在Java虚拟机上运行的目标代码（字节码），就可以在多种平台上不加修改地运行。Java虚拟机在执行字节码时，把字节码解释成具体平台上的机器指令执行。
 
-####哪些情况下的对象会被垃圾回收机制处理掉-美团/小米
+####哪些情况下的对象会被垃圾回收机制处理掉-美团-小米
 
 Java 垃圾回收机制最基本的做法是分代回收。内存中的区域被划分成不同的世代，对象根据其存活的时间被保存在对应世代的区域中。一般的实现是划分成3个世代：年轻、年老和永久。内存的分配是发生在年轻世代中的。当一个对象存活时间足够长的时候，它就会被复制到年老世代中。对于不同的世代可以使用不同的垃圾回收算法。进行世代划分的出发点是对应用中对象存活时间进行研究之后得出的统计规律。一般来说，一个应用中的大部分对象的存活时间都很短。比如局部变量的存活时间就只在方法的执行过程中。基于这一点，对于年轻世代的垃圾回收算法就可以很有针对性。
 
-####进程和线程的区别-猎豹/美团
+####进程和线程的区别-猎豹-美团
 
 简而言之,一个程序至少有一个进程,一个进程至少有一个线程。
 
@@ -101,7 +101,7 @@ Java 垃圾回收机制最基本的做法是分代回收。内存中的区域被
 
 进程和线程的主要差别在于它们是不同的操作系统资源管理方式。进程有独立的地址空间，一个进程崩溃后，在保护模式下不会对其它进程产生影响，而线程只是一个进程中的不同执行路径。线程有自己的堆栈和局部变量，但线程之间没有单独的地址空间，一个线程死掉就等于整个进程死掉，所以多进程的程序要比多线程的程序健壮，但在进程切换时，耗费资源较大，效率要差一些。但对于一些要求同时进行并且又要共享某些变量的并发操作，只能用线程，不能用进程。如果有兴趣深入的话，我建议你们看看《现代操作系统》或者《操作系统的设计与实现》。对就个问题说得比较清楚。
 
-####Java中==和equals的区别,equals和hashCode的区别-乐视
+####==和equals和hashCode的区别-乐视
 
 http://blog.csdn.net/tiantiandjava/article/details/46988461
 
@@ -120,11 +120,11 @@ http://blog.csdn.net/tiantiandjava/article/details/46988461
 	
 从上图中可以看出，HashMap底层就是一个数组结构，数组中的每一项又是一个链表。当新建一个HashMap的时候，就会初始化一个数组。
 
-####java状态机
+####状态机
 
 http://www.jdon.com/designpatterns/designpattern_State.htm
 
-####java中int char long各占多少字节数
+####int-char-long各占多少字节数
 
 byte 位数 8 字节数 1
 
@@ -140,11 +140,11 @@ double 64 8
 
 char 16 2
 
-####java int与integer的区别
+####int与integer的区别
 
 http://www.cnblogs.com/shenliang123/archive/2011/10/27/2226903.html
 
-####string stringbuffer stringbuilder 区别-小米/乐视/百度
+####string-stringbuffer-stringbuilder区别-小米-乐视-百度
 
 String 字符串常量
 
@@ -225,7 +225,7 @@ Java中多态性的实现
 
 Java中多态的实现方式：接口实现，继承父类进行方法重写，同一个类中进行方法重载。
 
-####什么导致线程阻塞-58/美团
+####什么导致线程阻塞-58-美团
 
 线程的阻塞
 
@@ -295,21 +295,21 @@ wait() 和 notify() 方法的上述特性决定了它们经常和synchronized �
 如果你往抽象类中添加新的方法，你可以给它提供默认的实现。因此你不需要改变你现在的代码。	
 如果你往接口中添加方法，那么你必须改变实现该接口的类。
 
-####容器类之间的区别-乐视/美团
+####容器类之间的区别-乐视-美团
 
 http://www.cnblogs.com/yuanermen/archive/2009/08/05/1539917.html
 http://alexyyek.github.io/2015/04/06/Collection/
 http://tianmaying.com/tutorial/java_collection
 
-####java 内部类
+####内部类
 
 http://www.cnblogs.com/chenssy/p/3388487.html
 
-####java中hashmap和hashtable的区别-乐视/小米
+####hashmap和hashtable的区别-乐视-小米
 
 http://www.233.com/ncre2/JAVA/jichu/20100717/084230917.html
 
-####ArrayMap VS HashMap
+####ArrayMap对比HashMap
 
 http://lvable.com/?p=217
 
