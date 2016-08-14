@@ -36,7 +36,7 @@ CSDN: http://blog.csdn.net/rain_butterfly
 	* [容器类之间的区别-乐视-美团](#容器类之间的区别-乐视-美团)
 	* [内部类](#内部类)
 	* [hashmap和hashtable的区别-乐视-小米](#hashmap和hashtable的区别-乐视-小米)
-	* [ArrayMap对比HashMap](#arrayMap对比hashMap)
+	* [ArrayMap对比HashMap](#arraymap对比hashmap)
 * [安卓](#android)
 
 ###java
