@@ -87,19 +87,19 @@ http://www.jdon.com/designpatterns/designpattern_State.htm
 
 **14.How many bits and bytes does each of short, int, long, char, float, double contains in Java?**
 
-1 byte contains 8 bits
+1 byte contains 8 bits, therefore
 
-short 16 2
+short - 16 bits or 2 bytes
 
-int 32 4
+int - 32 bits or 4 bytes
 
-long 64 8
+long - 64 bits or 8 bytes
 
-float 32 4
+float - 32 bits or 4 bytes
 
-double 64 8
+double - 64 bits or 8 bytes
 
-char 16 2
+char - 16 bits or 2 bytes
 
 **15.What is the difference between int and an Integer in Java?**
 
