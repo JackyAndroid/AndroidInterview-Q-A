@@ -261,10 +261,12 @@ http://tianmaying.com/tutorial/java_collection
 **21.Define inner class in Java**
 
 http://www.cnblogs.com/chenssy/p/3388487.html
+For english language users: http://www.tutorialspoint.com/java/java_innerclasses.htm
 
 **22.What is HashMap?Differentiate between a HashMap and HashTable in Java.**
 
 http://www.233.com/ncre2/JAVA/jichu/20100717/084230917.html
+For english language users: http://www.javatpoint.com/difference-between-hashmap-and-hashtable
 
 **23.Differentiate between ArrayMap and HashMap**
 
