@@ -315,19 +315,19 @@ http://lvable.com/?p=217
 
 ###Android
 
-**1.数据库的操作类型有哪些，如何导入外部数据库？**
+####如何导入外部数据库？
 
 把原数据库包括在项目源码的 res/raw 
 
 android系统下数据库应该存放在 /data/data/com.*.*（package name）/ 目录下，所以我们需要做的是把已有的数据库传入那个目录下.操作方法是用FileInputStream读取原数据库，再用FileOutputStream把读取到的东西写入到那个目录.
 
-**2.是否使用过本地广播，和全局广播有什么差别？**
+####本地广播和全局广播有什么差别？
 
 因广播数据在本应用范围内传播，不用担心隐私数据泄露的问题。
 不用担心别的应用伪造广播，造成安全隐患。
 相比在系统内发送全局广播，它更高效。
 
-**3.是否使用过intentService，作用是什么，AIDL解决了什么问题？**(小米)
+####是否使用过intentService，作用是什么，AIDL解决了什么问题？-小米
 
 生成一个默认的且与主线程互相独立的工作者线程来执行所有传送至onStartCommand() 方法的Intetnt。
 
@@ -340,7 +340,7 @@ android系统下数据库应该存放在 /data/data/com.*.*（package name）/ �
 AIDL (Android Interface Definition Language) 是一种IDL 语言，用于生成可以在Android设备上两个进程之间进行进程间通信(interprocess communication, IPC)的代码。如果在一个进程中（例如Activity）要调用另一个进程中（例如Service）对象的操作，就可以使用AIDL生成可序列化的参数。
 AIDL IPC机制是面向接口的，像COM或Corba一样，但是更加轻量级。它是使用代理类在客户端和实现端传递数据。
 
-**4.Activity、Window、View三者的差别，fragment的特点？**（360）
+####Activity、Window、View三者的差别，fragment的特点？-360
 
 Activity像一个工匠（控制单元），Window像窗户（承载模型），View像窗花（显示视图）
 LayoutInflater像剪刀，Xml配置像窗花图纸。
@@ -363,11 +363,11 @@ fragment 特点
 * 在Activity运行过程中，可以添加、移除或者替换Fragment；
 * Fragment可以响应自己的输入事件，并且有自己的生命周期，它们的生命周期会受宿主Activity的生命周期影响。
 
-**5.描述一次网络请求的流程**（新浪）
+####描述一次网络请求的流程-新浪
 
 ￼![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/http.png)
 
-**6.Handler、Thread和HandlerThread的差别**（小米）
+####Handler、Thread和HandlerThread的差别-小米
 
 http://blog.csdn.net/guolin_blog/article/details/9991569
 
@@ -377,11 +377,11 @@ http://droidyue.com/blog/2015/11/08/make-use-of-handlerthread/
 
 android.os.Handler可以通过Looper对象实例化，并运行于另外的线程中，Android提供了让Handler运行于其它线程的线程实现，也是就HandlerThread。HandlerThread对象start后可以获得其Looper对象，并且使用这个Looper对象实例Handler。
 
-**7.低版本SDK实现高版本api**（小米）
+####低版本SDK实现高版本api-小米
 
 自己实现或@TargetApi annotation
 
-**8.Ubuntu编译安卓系统**（百度）
+####Ubuntu编译安卓系统-百度
 
 1. 进入源码根目录
 2. . build/envsetup.sh
@@ -390,7 +390,7 @@ android.os.Handler可以通过Looper对象实例化，并运行于另外的线�
 5. userdebug(选择编译版本)
 6. make -j8(开启8个线程编译)
 
-**9.launch mode应用场景**（百度、小米、乐视）
+####launch mode应用场景-百度-小米-乐视
 
 standard，创建一个新的Activity。
 
@@ -418,22 +418,22 @@ singleInstance应用场景：
 
 闹铃的响铃界面。 你以前设置了一个闹铃：上午6点。在上午5点58分，你启动了闹铃设置界面，并按 Home 键回桌面；在上午5点59分时，你在微信和朋友聊天；在6点时，闹铃响了，并且弹出了一个对话框形式的 Activity(名为 AlarmAlertActivity) 提示你到6点了(这个 Activity 就是以 SingleInstance 加载模式打开的)，你按返回键，回到的是微信的聊天界面，这是因为 AlarmAlertActivity 所在的 Task 的栈只有他一个元素， 因此退出之后这个 Task 的栈空了。如果是以 SingleTask 打开 AlarmAlertActivity，那么当闹铃响了的时候，按返回键应该进入闹铃设置界面。
 
-**10.touch 事件传递流程**（小米）
+####touch 事件传递流程-小米
 
 http://hanhailong.com/2015/09/24/Android-%E4%B8%89%E5%BC%A0%E5%9B%BE%E6%90%9E%E5%AE%9ATouch%E4%BA%8B%E4%BB%B6%E4%BC%A0%E9%80%92%E6%9C%BA%E5%88%B6/
 
-**11.view绘制流程**（百度）
+####view绘制流程-百度
 
 http://www.codekk.com/blogs/detail/54cfab086c4761e5001b253f
 
-**12.多线程**（360）
+####多线程-360
 
 * Activity.runOnUiThread(Runnable)
 * View.post(Runnable),View.postDelay(Runnable,long)
 * Handler
 * AsyncTask
 
-**13.线程同步**（百度）
+####线程同步-百度
 
 http://www.itzhai.com/java-based-notebook-thread-synchronization-problem-solving-synchronization-problems-synchronized-block-synchronized-methods.html#read-more
 
@@ -457,7 +457,7 @@ public static Singleton getInstance(){
   }
 }
 ```
-**14.什么情况导致内存泄漏**（美团）
+####什么情况导致内存泄漏-美团
 
 1.资源对象没关闭造成的内存泄漏
 
@@ -530,7 +530,7 @@ Android内存泄漏。
 
 我们通常把一些对象的引用加入到了集合中，当我们不需要该对象时，并没有把它的引用从集合中清理掉，这样这个集合就会越来越大。如果这个集合是static的话，那情况就更严重了。
 
-**15.ANR定位和修正**
+####ANR定位和修正
 
 如果开发机器上出现问题，我们可以通过查看/data/anr/traces.txt即可，最新的ANR信息在最开始部分。
 
@@ -549,7 +549,7 @@ Android系统会监控程序的响应状况，一旦出现下面两种情况，�
 * BroadcastReceiver中onReceive代码也要尽量减少耗时，建议使用IntentService处理。
 
 
-**16.什么情况导致oom**（乐视、美团）
+####什么情况导致oom-乐视-美团
 
 http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0920/3478.html
 
@@ -560,20 +560,20 @@ http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0920/3478.html
 5）onDraw方法里面执行对象的创建
 6）StringBuilder
 
-**17.Android Service与Activity之间通信的几种方式**
+####Android Service与Activity之间通信的几种方式
 
 * 通过Binder对象
 * 通过broadcast(广播)的形式
 
-**18.Android各个版本API的区别**
+####Android各个版本API的区别
 
 http://blog.csdn.net/lijun952048910/article/details/7980562
 
-**19. Android代码中实现WAP方式联网**（360）
+####Android代码中实现WAP方式联网-360
 
 http://blog.csdn.net/asce1885/article/details/7844159
 
-**20.如何保证service在后台不被kill**
+####如何保证service在后台不被kill
 
 一、onStartCommand方法，返回START_STICKY
 
@@ -613,7 +613,7 @@ service +broadcast  方式，就是当service走ondestory的时候，发送一�
 
 通过系统的一些广播，比如：手机重启、界面唤醒、应用状态改变等等监听并捕获到，然后判断我们的Service是否还存活，别忘记加权限啊。
 
-**21.Requestlayout，onlayout，onDraw，DrawChild区别与联系**（猎豹）
+####Requestlayout，onlayout，onDraw，DrawChild区别与联系-猎豹
 
 requestLayout()方法 ：会导致调用measure()过程 和 layout()过程 。
 说明：只是对View树重新布局layout过程包括measure()和layout()过程，不会调用draw()过程，但不会重新绘制
@@ -625,19 +625,19 @@ onLayout()方法(如果该View是ViewGroup对象，需要实现该方法，对�
 
 drawChild()去重新回调每个子视图的draw()方法
 
-**22.invalidate()和postInvalidate() 的区别及使用**（百度）
+####invalidate()和postInvalidate() 的区别及使用-百度
 
 http://blog.csdn.net/mars2639/article/details/6650876
 
-**23.Android动画框架实现原理**
+####Android动画框架实现原理
 
 Animation框架定义了透明度，旋转，缩放和位移几种常见的动画，而且控制的是整个View，实现原理是每次绘制视图时View所在的ViewGroup中的drawChild函数获取该View的Animation的Transformation值，然后调用canvas.concat(transformToApply.getMatrix())，通过矩阵运算完成动画帧，如果动画没有完成，继续调用invalidate()函数，启动下次绘制来驱动动画，动画过程中的帧之间间隙时间是绘制函数所消耗的时间，可能会导致动画消耗比较多的CPU资源，最重要的是，动画改变的只是显示，并不能相应事件。
 
-**24.Android为每个应用程序分配的内存大小是多少？**（美团）
+####Android为每个应用程序分配的内存大小是多少？-美团
 
 android程序内存一般限制在16M，也有的是24M
 
-**25.Android View刷新机制**（百度、美团）
+####Android View刷新机制-百度-美团
 
 由ViewRoot对象的performTraversals()方法调用draw()方法发起绘制该View树，值得注意的是每次发起绘图时，并不会重新绘制每个View树的视图，而只会重新绘制那些“需要重绘”的视图，View类内部变量包含了一个标志位DRAWN，当该视图需要重绘时，就会为该View添加该标志位。
 
@@ -650,7 +650,7 @@ mView.draw()开始绘制，draw()方法实现的功能如下：
 3. 调用onDraw()方法绘制视图本身   (每个View都需要重载该方法，ViewGroup不需要实现该方法)
 4. 调用dispatchDraw ()方法绘制子视图(如果该View类型不为ViewGroup，即不包含子视图，不需要重载该方法)值得说明的是，ViewGroup类已经为我们重写了dispatchDraw ()的功能实现，应用程序一般不需要重写该方法，但可以重载父类函数实现具体的功能。
 
-**26.LinearLayout对比RelativeLayout**（百度）
+####LinearLayout对比RelativeLayout-百度
 
 1. RelativeLayout会让子View调用2次onMeasure，LinearLayout 在有weight时，也会调用子View2次onMeasure
 2. RelativeLayout的子View如果高度和RelativeLayout不同，则会引发效率问题，当子View很复杂时，这个问题会更加严重。如果可以，尽量使用padding代替margin。
@@ -658,7 +658,7 @@ mView.draw()开始绘制，draw()方法实现的功能如下：
 
 最后再思考一下文章开头那个矛盾的问题，为什么Google给开发者默认新建了个RelativeLayout，而自己却在DecorView中用了个LinearLayout。因为DecorView的层级深度是已知而且固定的，上面一个标题栏，下面一个内容栏。采用RelativeLayout并不会降低层级深度，所以此时在根节点上用LinearLayout是效率最高的。而之所以给开发者默认新建了个RelativeLayout是希望开发者能采用尽量少的View层级来表达布局以实现性能最优，因为复杂的View嵌套对性能的影响会更大一些。
 
-**27.优化自定义view**（百度、乐视、小米）
+####优化自定义view百度-乐视-小米
 
 为了加速你的view，对于频繁调用的方法，需要尽量减少不必要的代码。先从onDraw开始，需要特别注意不应该在这里做内存分配的事情，因为它会导致GC，从而导致卡顿。在初始化或者动画间隙期间做分配内存的动作。不要在动画正在执行的时候做内存分配的事情。
 
@@ -668,34 +668,34 @@ mView.draw()开始绘制，draw()方法实现的功能如下：
 
 如果你有一个复杂的UI，你应该考虑写一个自定义的ViewGroup来执行他的layout操作。与内置的view不同，自定义的view可以使得程序仅仅测量这一部分，这避免了遍历整个view的层级结构来计算大小。这个PieChart 例子展示了如何继承ViewGroup作为自定义view的一部分。PieChart 有子views，但是它从来不测量它们。而是根据他自身的layout法则，直接设置它们的大小。
 
-**28.ContentProvider**（乐视）
+####ContentProvider-乐视
 
 http://blog.csdn.net/coder_pig/article/details/47858489
 
-**29.fragment生命周期**
+####fragment生命周期
 
 ![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/fragment-life.png)
 
-**30.volley解析**（美团、乐视）
+####volley解析-美团-乐视
 
 http://a.codekk.com/detail/Android/grumoon/Volley%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90
 
-**31.Android Glide源码解析**
+####Android Glide源码解析
 
 http://www.lightskystreet.com/2015/10/12/glide_source_analysis/
 http://frodoking.github.io/2015/10/10/android-glide/
 
-**32.Android 设计模式**
+####Android 设计模式
 
 http://blog.csdn.net/bboyfeiyu/article/details/44563871
 
-**33.架构设计**（搜狐）
+####架构设计-搜狐
 
 ![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/architucture.png)
 
 http://www.tianmaying.com/tutorial/AndroidMVC
 
-**34.Android属性动画特性**（乐视、小米）
+####Android属性动画特性-乐视-小米
 
 如果你的需求中只需要对View进行移动、缩放、旋转和淡入淡出操作，那么补间动画确实已经足够健全了。但是很显然，这些功能是不足以覆盖所有的场景的，一旦我们的需求超出了移动、缩放、旋转和淡入淡出这四种对View的操作，那么补间动画就不能再帮我们忙了，也就是说它在功能和可扩展方面都有相当大的局限性，那么下面我们就来看看补间动画所不能胜任的场景。
 
