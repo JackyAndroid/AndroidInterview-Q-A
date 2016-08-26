@@ -401,20 +401,20 @@ http://www.juwends.com/tech/android/android-inter-thread-comm.html
 
 singleton
 
-```
+```java
 public class Singleton{
 private volatile static Singleton mSingleton;
 private Singleton(){
 }
-public static Singleton getInstance(){
-  if(mSingleton == null){\\A
-    synchronized(Singleton.class){\\C
-     if(mSingleton == null)
-      mSingleton = new Singleton();\\B
-      }
-    }
-    return mSingleton;
-  }
+public static Singleton getInstance() {
+	if(mSingleton == null) { \\ A
+		synchronized(Singleton.class) { \\ C
+			if(mSingleton == null) {
+				mSingleton = new Singleton();\\ B
+			}
+		}
+	}
+	return mSingleton;
 }
 ```
 **14. What are causes of the memory leak?**
@@ -429,29 +429,29 @@ To construct the ListView BaseAdapter, for example, in the BaseAdapter provides 
 
 The sample code:
 
-```
-public View getView(int position, ViewconvertView, ViewGroup parent) {
-View view = new Xxx(...); 
-... ... 
-return view; 
+```java
+public View getView(int position, ViewconvertView, ViewGroup parent){
+	View view= new Xxx(...);
+	// ... ... 
+	return view;
 } 
 ```
 
 Revised sample code:
 
-```
-public View getView(int position, ViewconvertView, ViewGroup parent) {
-View view = null; 
-if (convertView != null) { 
-view = convertView; 
-populate(view, getItem(position)); 
-... 
-} else { 
-view = new Xxx(...); 
-... 
-} 
-return view; 
-} 
+```java
+public View getView(int position, View convertView, ViewGroup parent) {
+	View view = null;
+	if (convertView != null) {
+		view = convertView;
+		populate(view, getItem(position));
+		// ...
+	} else {
+		view=new Xxx(...);
+		// ...
+	}
+	return view;
+}
 ```
 
 3. Bitmap object when not in use call recycle() free memory
