@@ -64,20 +64,20 @@ In short, a program of at least one process, a process of at least one thread.Th
 
 http://blog.csdn.net/tiantiandjava/article/details/46988461
 
-**11.What are the time complexities of common sorting algorithms?**
+**11. What are the time complexities of common sorting algorithms?**
 
 ![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/algorithm.png)
 
-** 12.What is a HashMap implementation principle?**
+**12. What is a HashMap implementation principle?**
 
 1. A HashMap overview：
-   HashMap is based on the hash Map interface of asynchronous implementation.This implementation provides all of the optional mapping operations, and allows the use of null values and null keys.Such does not guarantee the order of the map, in particular, it does not guarantee that the constant sequence. 
+	HashMap is based on the hash Map interface of asynchronous implementation.This implementation provides all of the optional mapping operations, and allows the use of null values and null keys.Such does not guarantee the order of the map, in particular, it does not guarantee that the constant sequence. 
 2. The data structure of a HashMap：
 	In the Java programming language, the basic structure is two kinds, one is an array, and another is to simulate a pointer (reference), all of the data structure can be used both to construct the basic structure, HashMap is no exception.HashMap is actually a "linked list hash data structure, which is a combination of array and chain table.
 
 ![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/hashmap.jpg)
 	
-Can be seen from the diagram above, a HashMap the underlying structure is an array, each item in the array and a linked list.When a new HashMap will initialize an array.
+Can be seen from the diagram above, a HashMap in the underlying structure is an array, each item in the array and a linked list. When a new HashMap will initialize an array.
 
 **13. Define Java state machine.**
 
@@ -132,9 +132,9 @@ In most cases StringBuffer > String
 
 StringBuffer
 
-Java. Lang. StringBuffer thread safe variable character sequence.A similar String String buffer, but cannot be modified.Though at any point in time it contains some specific sequences of characters, but through certain method calls can change the length of the sequence and content.
+java.lang.StringBuffer thread safe variable character sequence. A similar String String buffer, but cannot be modified. Though at any point in time it contains some specific sequences of characters, but through certain method calls can change the length of the sequence and content.
 
-A string buffer can be safely used in multiple threads.Can be in when necessary to synchronization of these methods, therefore all operations on any particular instance as if in a serial order, the order and method invocations of each thread order.
+A string buffer can be safely used in multiple threads. Can be in when necessary to synchronization of these methods, therefore all operations on any particular instance as if in a serial order, the order and method invocations of each thread order.
 
 Are the major operating on the StringBuffer append and insert method, can override these methods, to accept any type of data.Each method can effectively to the given data into a string, then the string of characters added or inserted into the string in the buffer.These characters of append method will always add it to the end of the buffer;While the insert method add character at the specified point.
 
@@ -144,7 +144,7 @@ In most cases StringBuilder > StringBuffer
 
 java.lang.StringBuilder
 
-Java. Lang. StringBuilder a mutable sequence of characters is the new 5.0.This provides an API compatible with StringBuffer, but does not guarantee that synchronization.This class is designed to be used as a replacement of a simple StringBuffer, when used in string buffer is used by a single thread (this is very common).If possible, it is recommended that the priority use this class, because in most implementations, it is faster than StringBuffer.Both methods are basically the same
+java.lang.StringBuilder a mutable sequence of characters is the new 5.0.This provides an API compatible with StringBuffer, but does not guarantee that synchronization.This class is designed to be used as a replacement of a simple StringBuffer, when used in string buffer is used by a single thread (this is very common). If possible, it is recommended that the priority use this class, because in most implementations, it is faster than StringBuffer.Both methods are basically the same.
 
 **17. Explain polymorphism in Java**
 
@@ -152,24 +152,24 @@ The understanding of Java polymorphism
 
 Java realization of polymorphism
 
-What is a polymorphic
+What is a polymorphism?
 
-Object-oriented three features: encapsulation, inheritance and polymorphism.From a certain perspective, encapsulation and inheritance are almost for state.This is our last a concept, which is the most important knowledge points.
+Object-oriented programming has three features: encapsulation, inheritance and polymorphism. From a certain perspective, encapsulation and inheritance are almost for state. This is our last concept, which is the most important for knowledge as an android developer.
 
-The definition of polymorphism refers to allow different kinds of objects to respond to the same news.The same message can be according to difference of sending objects and use a variety of different ways of behavior.(send a message is a function call)
+The definition of polymorphism refers to allow different kinds of objects to respond to the same news.The same message can be according to difference of sending objects and use a variety of different ways of behavior (send a message is a function call).
 
 Polymorphism of the technology, called: dynamic binding (dynamic binding), refers to judgment during the execution of the actual type of reference objects, according to its actual type call the corresponding method.
 
 The role of polymorphism: eliminate the coupling relationship between the types.
 
-In reality, examples of polymorphism.If press the F1 key action, for example, the current in the pop-up Flash screen is AS 3 help documentation;If the current pop-up is Word help under the Word;Under the Windows is a pop-up Windows help and support.The same event will produce different results in different objects.
+In reality, examples of polymorphism. If we press the F1 key action, for example, the current in the pop-up Flash screen is AS 3 help documentation;If the current pop-up is Word then it display "help" under the Word;Under the Windows is a pop-up Windows help and support. The same event will produce different results in different objects.
 
 Here are three necessary conditions for the existence of polymorphism
 
 Three necessary conditions for the existence of polymorphism
-一、inherited;
-二、rewrite；
-三、The parent class reference is to subclass object。
+*inherited;
+*rewrite；
+*The parent class reference is to subclass object。
 
 Benifits of Polymorphism:
 
@@ -185,70 +185,65 @@ Benifits of Polymorphism:
 
 Java realization of polymorphic methods: interface implementation, rewrite the inheritance of the parent class method, in the same class method overloading.
 
-**18.What causes thread block?**
+**18. What causes thread block?**
 
-The blocking of the thread
+The blocking of the thread:
 
 In order to solve the conflict of access to the Shared storage area, Java synchronization mechanism was introduced, now let's examine multiple threads access to Shared resources, synchronization mechanism has obviously not enough, because the resources required at any time may not ready to be accessed, in turn, the same time ready resources can be more than one.In order to solve the problem of this kind of access control, Java's support for blocking mechanism is introduced.
 
 Blocking refers to suspend the execution of a thread to wait for a condition (such as a resource in place), studied the operating system's classmate of it must have been very familiar with.Java provides a number of ways to support block, let's analyze them one by one.
 
-1. Sleep () methods: sleep () allows you to specify a period of time in milliseconds as a parameter, it makes the thread into the blocked state within a specified time, can't get the CPU time, the specified time, the thread back into the executable.Typically, the sleep () is used in waiting for a resource ready: test found that when conditions are not fulfilled, the thread block after a period of time to test, until a condition is met.
-2. Suspend () and resume () method: two methods, suspend () makes the thread into the blocking state, and does not automatically restore, must have its corresponding resume () is called, to make the thread back into the executable.Typically, suspend () and resume () is used in waiting for the result of a another thread: after tests found that the result has not produced, let the thread block, another thread produced results, calls resume () to make it recover.
-3. Yield () method: the yield () allows a thread to abandon the current share of CPU time, but don't make the thread block, the thread is still in the executable state, could share of CPU time again at any time.Call the yield () is equivalent to the effect of the scheduler that the thread has been carried out enough time to go to another thread.
-4. Wait () and notify () method: two methods are used, wait () makes the thread into the blocking state, it has two forms, one allows you to specify a period of time in milliseconds as a parameter, another has no parameters, the former when the corresponding notify () is invoked or beyond the specified time back into the executable thread state, the latter must correspond to the notify () is invoked.
+1. Sleep() methods: sleep() allows you to specify a period of time in milliseconds as a parameter, it makes the thread into the blocked state within a specified time, can't get the CPU time, the specified time, the thread back into the executable.Typically, the sleep() is used in waiting for a resource ready: test found that when conditions are not fulfilled, the thread block after a period of time to test, until a condition is met.
+2. Suspend() and resume() method: two methods, suspend() makes the thread into the blocking state, and does not automatically restore, must have its corresponding resume() is called, to make the thread back into the executable.Typically, suspend() and resume() is used in waiting for the result of a another thread: after tests found that the result has not produced, let the thread block, another thread produced results, calls resume() to make it recover.
+3. Yield() method: the yield() allows a thread to abandon the current share of CPU time, but don't make the thread block, the thread is still in the executable state, could share of CPU time again at any time.Call the yield() is equivalent to the effect of the scheduler that the thread has been carried out enough time to go to another thread.
+4. Wait() and notify() method: two methods are used, wait() makes the thread into the blocking state, it has two forms, one allows you to specify a period of time in milliseconds as a parameter, another has no parameters, the former when the corresponding notify() is invoked or beyond the specified time back into the executable thread state, the latter must correspond to the notify() is invoked.
 
-At first glance they and suspend () and resume () method is no different, but in fact they are very different.The core difference is that in front of the narrative method of all blocked will not release takes lock (if takes up), and the opposite each other.
+At first glance, suspend() and resume() method looks no different, but in fact they are very different. The core difference is that in front of the narrative method of all blocked will not release takes lock (if takes up), and the opposite each other.
 
-The core difference between led to a series of the difference on the details.
+The core difference between them led to a series of the difference on the details.
 
-First of all, in front of the narrative of all methods belongs to the Thread class, but the pair of directly affiliated to the Object class, that is to say, all objects with the two methods.At first glance it is quite incredible, but in fact it is very natural, because it blocked a method to release takes up the lock, the lock is any object, invoke arbitrary objects of wait () method of thread blocks, and the lock of the object is released.Object and calling any notify () method to call on the object of the wait () method and random selection in the blocked thread a unblocked (but have to wait until after the lock truly executable).
+First of all, in front of the narrative of all methods belongs to the Thread class, but the pair of directly affiliated to the Object class, that is to say, all objects with the two methods.At first glance it is quite incredible, but in fact it is very natural, because it blocked a method to release takes up the lock, the lock is any object, invoke arbitrary objects of wait() method of thread blocks, and the lock of the object is released.Object and calling any notify() method to call on the object of the wait() method and random selection in the blocked thread a unblocked (but have to wait until after the lock truly executable).
 
 Second, the narrative of all method calls can be in any position, but the two methods must be in a synchronized method or block calls, reason is very simple, only in a synchronized method or block the current thread holds locks, lock can be released.In the same way, call this method on the object lock must be owned by the current thread, so you can release a lock.As a result, the pair of method calls must be placed in such a synchronized method or block, the method or block the locked object is to call this method.If they do not meet the conditions, the program, though still able to compile, but abnormal IllegalMonitorStateException at run time.
 
-Wait () and notify () method of the above features determines they often use, together with a synchronized method or block them and inter-process communication mechanism of the operating system you will find a comparison of their similarities: a synchronized method or block provides a similar to the function of the operating system primitives, their execution will not be multi-threaded mechanism of the interference, and the laws of the other party is equal to the block and wakeup primitives (the two methods are declared as synchronized).They allow us to realize the combination of the operating system on a series of subtle interprocess communication algorithm (e.g., semaphore algorithm), and is used to solve the problem of all kinds of complex communication between threads.
+Wait() and notify() method of the above features determines they often use, together with a synchronized method or block them and inter-process communication mechanism of the operating system you will find a comparison of their similarities: a synchronized method or block provides a similar to the function of the operating system primitives, their execution will not be multi-threaded mechanism of the interference, and the laws of the other party is equal to the block and wakeup primitives (the two methods are declared as synchronized).They allow us to realize the combination of the operating system on a series of subtle interprocess communication algorithm (e.g., semaphore algorithm), and is used to solve the problem of all kinds of complex communication between threads.
 
 About the wait() and notify() method and then two points:
 
-First: call notify() method to remove blocked thread from object by calling the wait () method and random in blocked thread, we cannot predict which thread will be selected, so to be very careful when programming, to avoid the problem due to the uncertainty.
+First: call notify() method to remove blocked thread from object by calling the wait() method and random in blocked thread, we cannot predict which thread will be selected, so to be very careful when programming, to avoid the problem due to the uncertainty.
 
 Second: in addition to notify(), and a method of notifyAll() can also play a similar role, the only difference is that the notifyAll() method will turn the object by call wait() method and block all the threads of disposable is unblocked.Of course, only get a lock that a thread can enter the executable.
 
-When it comes to block, that is to talk about a deadlock, slightly analysis can be found that suspend () method and do not specify a timeout period of wait() method calls are likely to produce a deadlock.Unfortunately, the Java does not support in the language level to avoid deadlock, we must be careful to avoid deadlock in the programming.
+When it comes to block, that is to talk about a deadlock, slightly analysis can be found that suspend() method and do not specify a timeout period of wait() method calls are likely to produce a deadlock.Unfortunately, the Java does not support in the language level to avoid deadlock, we must be careful to avoid deadlock in the programming.
 
-Above we implemented in Java thread blocking the various methods for the analysis, we analyzed the wait () and notify () method, because they are the most powerful, use is also the most flexible, but it also leads to low efficiency, the more error prone.We should be flexible use of various methods in practical use, in order to better achieve our purpose.
+Above we implemented in Java thread blocking the various methods for the analysis, we analyzed the wait() and notify() method, because they are the most powerful, use is also the most flexible, but it also leads to low efficiency, the more error prone.We should be flexible use of various methods in practical use, in order to better achieve our purpose.
 
 **19.What is the difference between an abstract class and interface?**
 
-1. The realization of the default method
+1. The realization of the default method:
 An abstract class can have a default method is completely abstract.The realization of the interface method doesn't exist
 
-2. Implementation
+2. Implementation:
 Subclasses use the extends keyword to inherit an abstract class.If a subclass isn't an abstract class, it will need to provide all the methods declared in the abstract class.A subclass to implement the interface with the keyword implements.It will need to provide all the methods declared in the interface implementation
-3. The constructor
+3. The constructor:
 An abstract class can have a constructor,Interface can not have a constructor
-4. The difference between the interface and the normal Java classes	
+4. The difference between the interface and the normal Java classes:	
 Besides you cannot instantiate an abstract class, it and ordinary Java classes without any difference
 The type of interface is completely different
-
-5. Access modifiers	
+5. Access modifiers:	
 Abstract methods can be public, protected, and the default these modifiers
 The default modifier is public interface methods.You can not use other modifiers.
-
 6. The main() method	
 Abstract method can have the main method and we can run it	
 Interface is not the main method, so we can't afford to run it.
-
 7. Multiple inheritance	
 Abstract classes in the Java language is a kind of inheritance, said in a subclass is only one parent, but there can be multiple interfaces.
-
 8. Speed	
-Abstract class faster than interfaces	
+Abstract class are faster than interfaces	
 Interface is a little slow, because it need time to find the method to realize in the class.
-
 9. Add new methods
-If you to add a new method in an abstract class, you can give it to the default implementation.So you don't need to change your code now.
-If you added to the interface method, then you have to change the class implements the interface.
+If you have to add a new method in an abstract class, you can give it the default implementation. So you don't need to change your code now.
+If you added a new method to the interface, then you have to change the class implementation of that interface.
 
 **20. What is the difference between container classes?**
 
