@@ -16,7 +16,7 @@ Some of the questions (along with their answers) related to android and java ask
 **1. Significance of Interface**
 
 - Specification
-- extension
+- Extension
 - Callback
 
 **2. The significance of an abstract class**
@@ -60,7 +60,7 @@ The Java garbage collection mechanism is the most basic way is to generational c
 
 In short, a program of at least one process, a process of at least one thread.The thread dimension is less than the process of dividing, making high concurrency multithreaded program.In addition, the process is in the process of execution has an independent memory unit, and multiple threads to Shared memory, thus greatly improve the efficiency of the program.Threads in the process of execution and process or is there a difference.Each individual threads run a program entry, order execution sequence and the procedure of exports.But the threads will not be able to independently execute, must depend on application, provide multiple threads execute control by the application.From a logical point of view, a multithreaded significance lies in an application, there are multiple execution part can perform at the same time.But were not operating system with multiple threads as multiple independent applications, to realize the process of scheduling and management, and resource allocation.This is the important distinction between the threads and processes.Process is a certain independent function of the program on a run on one of the data collection activities, resource allocation and scheduling process is the system of an independent unit.Thread is a process of an entity, is the basic unit of the CPU scheduling and dispatching, which is smaller than the process of the basic unit of the can run independently. Thread basically does not own system resources, have only a little in operation of essential resources (such as the program counter, a set of registers and stack), but it can be to belong to a Shared other threads of a process possesses all the resources.A thread can be created and revoke another thread;Between the multiple threads in the same process can execute concurrently.Process and thread main difference is that they are the different ways of operating system resources management.Process has its own address space, a process after the collapse, in protected mode will not affect other processes, and in the process of the thread is just a different execution path.Thread has its own stack and local variables, but no single address space between thread, a thread die die is equal to the whole process, so the multi-process program than in a multithreaded program, but in the process of switching cost resources is bigger, the efficiency is less.But for some requirements and at the same time and again to share some of the variables of concurrent operation, can only use threads, cannot use process.If you are interested in further, I suggest you look at the modern operating systems or the design and implementation of the operating system.Said to is a problem more clearly.
 
-**10. In Java = = and equals the difference, the difference between equals and hashCode.**
+**10. Difference between == && equals() in java.**
 
 http://blog.csdn.net/tiantiandjava/article/details/46988461
 
@@ -146,7 +146,7 @@ java.lang.StringBuilder
 
 java.lang.StringBuilder a mutable sequence of characters is the new 5.0.This provides an API compatible with StringBuffer, but does not guarantee that synchronization.This class is designed to be used as a replacement of a simple StringBuffer, when used in string buffer is used by a single thread (this is very common). If possible, it is recommended that the priority use this class, because in most implementations, it is faster than StringBuffer.Both methods are basically the same.
 
-**17. Explain polymorphism in Java**
+**17. Explain polymorphism in Java.**
 
 The understanding of Java polymorphism
 
@@ -218,7 +218,7 @@ When it comes to block, that is to talk about a deadlock, slightly analysis can 
 
 Above we implemented in Java thread blocking the various methods for the analysis, we analyzed the wait() and notify() method, because they are the most powerful, use is also the most flexible, but it also leads to low efficiency, the more error prone.We should be flexible use of various methods in practical use, in order to better achieve our purpose.
 
-**19.What is the difference between an abstract class and interface?**
+**19. What is the difference between an abstract class and interface?**
 
 1. The realization of the default method:
 An abstract class can have a default method is completely abstract.The realization of the interface method doesn't exist
@@ -245,18 +245,20 @@ Interface is a little slow, because it need time to find the method to realize i
 If you have to add a new method in an abstract class, you can give it the default implementation. So you don't need to change your code now.
 If you added a new method to the interface, then you have to change the class implementation of that interface.
 
-**20. What is the difference between container classes?**
+**20. Collection Framework in Java.**
 
 http://www.cnblogs.com/yuanermen/archive/2009/08/05/1539917.html<br>
 http://alexyyek.github.io/2015/04/06/Collection/<br>
-http://tianmaying.com/tutorial/java_collection
+http://tianmaying.com/tutorial/java_collection<br>
+For english readers: http://www.javatpoint.com/collections-in-java
+
 
 **21. Define Inner classes in Java.**
 
 http://www.cnblogs.com/chenssy/p/3388487.html
 For english language users: http://www.tutorialspoint.com/java/java_innerclasses.htm
 
-**22. What is HashMap?Differentiate between a HashMap and HashTable in Java.**
+**22. What is HashMap? Differentiate between a HashMap and HashTable in Java.**
 
 http://www.233.com/ncre2/JAVA/jichu/20100717/084230917.html
 For english language users: http://www.javatpoint.com/difference-between-hashmap-and-hashtable
@@ -279,7 +281,7 @@ Because of radio data transmission in the application scope, don't have to worry
 Don't have to worry about other application forge the broadcast, cause potential safety hazard.
 Compared to send global broadcast in the system, it is more efficient.
 
-**3. Have you used intentService? What is the function of intentService? Does AIDL has solved the problem?**
+**3. Have you used intentService? What is the usage of intentService? Does AIDL has solved the problem?**
 
 To generate a default and independent of each other than the main thread to execute all sent to onStartCommand () method of Intetnt.
 
@@ -576,9 +578,9 @@ http://blog.csdn.net/mars2639/article/details/6650876
 
 Animation framework defines transparency, rotate, scale and displacement of several common Animation, and control the whole View, the realization principle is every time map View in the View of ViewGroup drawChild function to get the View the Animation of the Transformation of value, and then call canvas. The concat (transformToApply. GetMatrix ()), through the matrix operations complete Animation frames, if there is no complete Animation, continue to call invalidate () function, start the next map to drive the Animation, Animation in the process of clearance between the frame time is consumed by a mapping function, may cause Animation consume more CPU resources, the most important thing is, Animation change just show, and not the corresponding event.
 
-**24. Android for each application allocated memory size is it?**
+**24. Android application memory limit**
 
-The android program memory is generally limited to 16 m, also have a plenty of 24 m
+It varies with screen size and android versions, however the android program memory is generally limited to 16 mb as in android 4.1.
 
 **25. Describe View refresh mechanism in Android.**
 
@@ -593,7 +595,7 @@ mView.draw() began to draw，draw() methods the functions as follows：
 3. Calling ontouch() method draw View itself (each View to override this method, ViewGroup don't need to implement the method)
 4. Call dispatchDraw() method draw child views (if the View type of ViewGroup that does not contain child views, do not need to reload the method) is worth, ViewGroup class has been rewritten for us dispatchDraw() function implementation, application generally does not need to rewrite the method, but you can override the parent class function to achieve specific functions.
 
-**26.LinearLayout contrast RelativeLayout.**
+**26. LinearLayout contrast RelativeLayout.**
 
 1. RelativeLayout can let the child View call two onMeasure, LinearLayout in weight, also can call onMeasure View2 times
 2. RelativeLayout child View if different height and RelativeLayout, will lead to efficiency, when the View is very complex, this problem will be more serious.If you can, try to use padding instead of margin.
@@ -601,7 +603,7 @@ mView.draw() began to draw，draw() methods the functions as follows：
 
 Finally, consider the question of opening the contradiction, why Google to developers default has built a RelativeLayout, in using a LinearLayout DecorView on yourself.Because of the depth of the hierarchy of DecorView is known and fixed, a title bar above, below a NaRongLan.Using RelativeLayout will not reduce the levels of depth, so at this point on the root node using LinearLayout is the most efficient.And the reason for developers default has built a RelativeLayout is a hope that developers can use less as far as possible to express the View hierarchy layout to achieve optimal performance, because the View of complex nested will be a greater impact on performance.
 
-**27.To optimize the custom view**
+**27. Optimization of the custom view**
 
 In order to speed up your view, for the method called frequently, need to try to reduce unnecessary code.Begin with ontouch, need special attention should not be here to do the memory allocation, because it will lead to the GC, resulting in caton.During the initialization or animation clearance do allocate memory.Don't do memory allocation when animation is executing.
 
