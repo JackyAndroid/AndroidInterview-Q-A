@@ -13,19 +13,19 @@ Some of the questions (along with their answers) related to android and java ask
 
 ###Java
 
-**1. Significance of Interface**
+####Significance of Interface
 
 - Specification
 - Extension
 - Callback
 
-**2. The significance of an abstract class**
+####The significance of an abstract class
 
 * Provide a common type of its subclasses
 * Encapsulation subclasses of duplicate content
 * To define abstract methods
 
-**3. The role of the inner class**
+####The role of the inner class
 
 1. The inner class can use multiple instances of each instance has its own state information, and information with other peripheral objects are independent of each other.
 2. Outside of a single class, allows multiple inner class to implement the same interface in different ways, or the same class inheritance.
@@ -33,42 +33,42 @@ Some of the questions (along with their answers) related to android and java ask
 4. Inner classes is not confusing "is - a"relationship, it is an independent entity.
 5. Inner class provides better encapsulation, in addition to the outer class, other class cannot access
 
-**4. Does static method can be overriden？Why or why not?**
+####Does static method can be overriden？Why or why not?
 
 No we can't override static methods.
 
 Subclass inherits the parent class, use the same method of static and non-static methods, then non-static methods covered in the parent class method (namely rewriting), the static method of the parent is hidden (if the object is the parent class is called the hidden method), the other a subclass inherits the parent class of the static and non-static methods, as for the method overloading I think it is one of the elements in the same class, can't say what the parent class method and what method in a subclass is the embodiment of the method overloading
 
-**5. Major sorting algorithims and their implementation in Java.**
+####Major sorting algorithims and their implementation in Java
 
 These can be found here in this blog - http://blog.csdn.net/qy1387/article/details/7752973
 P.S- If you don't understand chinese then please translate blog to your local language.
 
-**6. Enumerate the Java collection and inheritance relationships**
+####Enumerate the Java collection and inheritance relationships
 
 ![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/collection.png)
 
-**7. What are the important characteristics of the Java virtual machine?**
+####What are the important characteristics of the Java virtual machine
 
 An important feature of the Java language is with platform independence.While using the Java virtual machine is the key to achieve this feature.The general high-level language if you want to run on different platforms, at least needs to be compiled into different object code.And after the introduction of Java virtual machine, the Java language runtime on different platforms do not need to recompile.Java language usage patterns Java virtual machine blocked information related to the specific platform, makes the Java language compiler to generate the Java virtual machine to run the target code (byte code), you can run on multiple platforms without modification.Java virtual machine when performing the bytecode, explain the bytecode into concrete platform machine instruction execution.
 
-**8. Which object will be rid of garbage collection?**
+####Which object will be rid of garbage collection
 
 The Java garbage collection mechanism is the most basic way is to generational collection.In memory area is divided into different generations, object according to its survival time is saved in the corresponding generation area.The general implementation is divided into three generation: young, old and permanent.Memory allocation is occurred in the young generation.When an object survival time long enough, it will be copied to the older generation.For different generations can use different garbage collection algorithm.Divides the starting point is the generation of application objects to study the survival time of statistical rule.In general, an application of most objects in the survival of the time is very short.Such as the survival of the local variable time is only the execution of the method.Based on this, the young generation garbage collection algorithm can be targeted.
 
-**9. What is the difference between threads and processes?**
+####What is the difference between threads and processes
 
 In short, a program of at least one process, a process of at least one thread.The thread dimension is less than the process of dividing, making high concurrency multithreaded program.In addition, the process is in the process of execution has an independent memory unit, and multiple threads to Shared memory, thus greatly improve the efficiency of the program.Threads in the process of execution and process or is there a difference.Each individual threads run a program entry, order execution sequence and the procedure of exports.But the threads will not be able to independently execute, must depend on application, provide multiple threads execute control by the application.From a logical point of view, a multithreaded significance lies in an application, there are multiple execution part can perform at the same time.But were not operating system with multiple threads as multiple independent applications, to realize the process of scheduling and management, and resource allocation.This is the important distinction between the threads and processes.Process is a certain independent function of the program on a run on one of the data collection activities, resource allocation and scheduling process is the system of an independent unit.Thread is a process of an entity, is the basic unit of the CPU scheduling and dispatching, which is smaller than the process of the basic unit of the can run independently. Thread basically does not own system resources, have only a little in operation of essential resources (such as the program counter, a set of registers and stack), but it can be to belong to a Shared other threads of a process possesses all the resources.A thread can be created and revoke another thread;Between the multiple threads in the same process can execute concurrently.Process and thread main difference is that they are the different ways of operating system resources management.Process has its own address space, a process after the collapse, in protected mode will not affect other processes, and in the process of the thread is just a different execution path.Thread has its own stack and local variables, but no single address space between thread, a thread die die is equal to the whole process, so the multi-process program than in a multithreaded program, but in the process of switching cost resources is bigger, the efficiency is less.But for some requirements and at the same time and again to share some of the variables of concurrent operation, can only use threads, cannot use process.If you are interested in further, I suggest you look at the modern operating systems or the design and implementation of the operating system.Said to is a problem more clearly.
 
-**10. Difference between == && equals() in java.**
+####Difference between == && equals() in java
 
 http://blog.csdn.net/tiantiandjava/article/details/46988461
 
-**11. What are the time complexities of common sorting algorithms?**
+####What are the time complexities of common sorting algorithms
 
 ![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/algorithm.png)
 
-**12. What is a HashMap implementation principle?**
+####What is a HashMap implementation principle
 
 1. A HashMap overview：
 	HashMap is based on the hash Map interface of asynchronous implementation.This implementation provides all of the optional mapping operations, and allows the use of null values and null keys.Such does not guarantee the order of the map, in particular, it does not guarantee that the constant sequence. 
@@ -79,11 +79,11 @@ http://blog.csdn.net/tiantiandjava/article/details/46988461
 	
 Can be seen from the diagram above, a HashMap in the underlying structure is an array, each item in the array and a linked list. When a new HashMap will initialize an array.
 
-**13. Define Java state machine.**
+####Define Java state machine
 
 http://www.jdon.com/designpatterns/designpattern_State.htm
 
-**14. How many bits and bytes does each of short, int, long, char, float, double contains in Java?**
+####How many bits and bytes does each of short, int, long, char, float, double contains in Java
 
 1 byte contains 8 bits, therefore
 
@@ -99,11 +99,11 @@ double - 64 bits or 8 bytes
 
 char - 16 bits or 2 bytes
 
-**15. What is the difference between int and an Integer in Java?**
+####What is the difference between int and an Integer in Java
 
 http://www.cnblogs.com/shenliang123/archive/2011/10/27/2226903.html
 
-**16. What is the Difference between string, stringbuffer and stringbuilder?**
+####What is the Difference between string, stringbuffer and stringbuilder
 
 String String constants
 
@@ -146,7 +146,7 @@ java.lang.StringBuilder
 
 java.lang.StringBuilder a mutable sequence of characters is the new 5.0.This provides an API compatible with StringBuffer, but does not guarantee that synchronization.This class is designed to be used as a replacement of a simple StringBuffer, when used in string buffer is used by a single thread (this is very common). If possible, it is recommended that the priority use this class, because in most implementations, it is faster than StringBuffer.Both methods are basically the same.
 
-**17. Explain polymorphism in Java.**
+####Explain polymorphism in Java
 
 The understanding of Java polymorphism
 
@@ -185,7 +185,7 @@ Benifits of Polymorphism:
 
 Java realization of polymorphic methods: interface implementation, rewrite the inheritance of the parent class method, in the same class method overloading.
 
-**18. What causes thread block?**
+####What causes thread block
 
 The blocking of the thread:
 
@@ -218,7 +218,7 @@ When it comes to block, that is to talk about a deadlock, slightly analysis can 
 
 Above we implemented in Java thread blocking the various methods for the analysis, we analyzed the wait() and notify() method, because they are the most powerful, use is also the most flexible, but it also leads to low efficiency, the more error prone.We should be flexible use of various methods in practical use, in order to better achieve our purpose.
 
-**19. What is the difference between an abstract class and interface?**
+####What is the difference between an abstract class and interface?
 
 1. The realization of the default method:
 An abstract class can have a default method is completely abstract.The realization of the interface method doesn't exist
@@ -245,7 +245,7 @@ Interface is a little slow, because it need time to find the method to realize i
 If you have to add a new method in an abstract class, you can give it the default implementation. So you don't need to change your code now.
 If you added a new method to the interface, then you have to change the class implementation of that interface.
 
-**20. Collection Framework in Java.**
+####Collection Framework in Java
 
 http://www.cnblogs.com/yuanermen/archive/2009/08/05/1539917.html<br>
 http://alexyyek.github.io/2015/04/06/Collection/<br>
@@ -253,35 +253,35 @@ http://tianmaying.com/tutorial/java_collection<br>
 For english readers: http://www.javatpoint.com/collections-in-java
 
 
-**21. Define Inner classes in Java.**
+####Define Inner classes in Java
 
 http://www.cnblogs.com/chenssy/p/3388487.html
 For english language users: http://www.tutorialspoint.com/java/java_innerclasses.htm
 
-**22. What is HashMap? Differentiate between a HashMap and HashTable in Java.**
+####What is HashMap? Differentiate between a HashMap and HashTable in Java
 
 http://www.233.com/ncre2/JAVA/jichu/20100717/084230917.html
 For english language users: http://www.javatpoint.com/difference-between-hashmap-and-hashtable
 
-**23. Differentiate between ArrayMap and HashMap**
+####Differentiate between ArrayMap and HashMap
 
 http://lvable.com/?p=217
 
 ###Android
 
-**1. What types the operation of the database, how to import the external database?**
+####What types the operation of the database, how to import the external database
 
 The original database is included in the project source res/raw
 
 Under the android system should be stored in a database/data/data/com. *. * (package name)/directory, so we need to do is to put the existing database into the directory. Operation method is to use FileInputStream read the original database, reoccupy FileOutputStream your read write to that directory.
 
-**2. Whether used the local radio, and what is the difference between a global broadcast?**
+####Whether used the local radio, and what is the difference between a global broadcast
 
 Because of radio data transmission in the application scope, don't have to worry about privacy data leakage problems.
 Don't have to worry about other application forge the broadcast, cause potential safety hazard.
 Compared to send global broadcast in the system, it is more efficient.
 
-**3. Have you used intentService? What is the usage of intentService? Does AIDL has solved the problem?**
+####Have you used intentService? What is the usage of intentService? Does AIDL has solved the problem
 
 To generate a default and independent of each other than the main thread to execute all sent to onStartCommand () method of Intetnt.
 
@@ -296,7 +296,7 @@ generates serializable parameters.
 
 AIDL IPC mechanism is an interface, like COM and Corba, but more lightweight.It is to use the proxy class transfer data on the client and implementation.
 
-**4. What is the difference between an Activity, the Window, and the View? What are some of the characteristics of the fragments?**
+####What is the difference between an Activity, the Window, and the View? What are some of the characteristics of the fragments
 
 Activity as a craftsman (control unit), the Window like a Window (carrying model), the View like a paper-cut (display View)
 
@@ -320,11 +320,7 @@ Characteristics of fragments:
 * In the process of Activity operation, can add, remove or replace the fragments
 * Fragments can respond to their own input events, and has its own life cycle, their life cycle will be affected by the host of the Activity lifecycle
 
-**5. Describe a network request process.**
-
-￼![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/http.png)
-
-**6. What is the difference between Handler, Thread and HandlerThread?**
+####What is the difference between Handler, Thread and HandlerThread
 
 http://blog.csdn.net/guolin_blog/article/details/9991569
 
@@ -334,11 +330,11 @@ Thread from the Android (Java. Lang. Thread - > Java. Lang. Object) description 
 
 Android. The OS. The Handler can be instantiated by which objects, and running in other threads, android provides for Handler thread running in other threads, is also a HandlerThread.HandlerThread start can be obtained after the stars object, and using this Handler which object instance.
 
-**7. Low version of the SDK to achieve high version of the API**
+####Low version of the SDK to achieve high version of the API
 
 Implement it myself or @ TargetApi annotation
 
-**8. Ubuntu compiled android**
+####Ubuntu compiled android
 
 1. Enter the source root directory
 2. . build/envsetup.sh
@@ -347,7 +343,7 @@ Implement it myself or @ TargetApi annotation
 5. userdebug(Select compiler version)
 6. make -j8(Open eight compilation thread)
 
-**9. Describe various launch mode Application scenarios.**
+####Describe various launch mode Application scenarios
 
 Standard, create a new Activity.
 
@@ -375,22 +371,22 @@ SingleInstance application scenarios:
 
 The alarm bell ring interface.You used to set up an alarm: six o 'clock in the morning.58 points at 5 o 'clock in the morning, you start the alarm Settings interface, and press the Home button back to the desktop;At 59 to 5 in the morning, you at WeChat and friend chat;At 6 o 'clock, when the alarm rang, and pop up a dialog box in the form of Activity (called AlarmAlertActivity) prompts you to 6 (this Activity is to SingleInstance loading mode to open), you press the return key, back is WeChat chat interface, this is because the AlarmAlertActivity stack of the Task is only one element, he therefore exit after the Task stack is empty.If is AlarmAlertActivity SingleTask open, so when the alarm is ringing, press the return key should alarm set into the interface.
 
-**10. Describe Touch event delivery process.**
+####Describe Touch event delivery process
 
 http://hanhailong.com/2015/09/24/Android-%E4%B8%89%E5%BC%A0%E5%9B%BE%E6%90%9E%E5%AE%9ATouch%E4%BA%8B%E4%BB%B6%E4%BC%A0%E9%80%92%E6%9C%BA%E5%88%B6/
 
-**11. How the view drawing process works?**
+####How the view drawing process works
 
 http://www.codekk.com/blogs/detail/54cfab086c4761e5001b253f
 
-**12. How to use Multithreading in Android?**
+####How to use Multithreading in Android
 
 * Activity.runOnUiThread(Runnable)
 * View.post(Runnable),View.postDelay(Runnable,long)
 * Handler
 * AsyncTask
 
-**13. Describe Thread synchronization process in Android.**
+####Describe Thread synchronization process in Android
 
 http://www.itzhai.com/java-based-notebook-thread-synchronization-problem-solving-synchronization-problems-synchronized-block-synchronized-methods.html#read-more
 
@@ -414,7 +410,7 @@ public static Singleton getInstance() {
 	return mSingleton;
 }
 ```
-**14. What are causes of the memory leak?**
+####What are causes of the memory leak
 
 1. A memory leak caused by resource object is not closed
 
@@ -479,7 +475,7 @@ But if at the time of release LockScreen object forget cancel before we register
 
 We usually add some reference to the collection, when we don't need this object, did not make it a reference from the collection, so that this collection will be bigger and bigger.If this set is static, the situation is more serious.
 
-**15. ANR positioning and correction.**
+####ANR positioning and correction
 
 If development machine appear problem, we can by looking at the/data/anr/traces. TXT, the latest anr information in the first part.
 
@@ -496,7 +492,7 @@ If development machine appear problem, we can by looking at the/data/anr/traces.
 * The Activity's onCreate and onResume avoid time-consuming code in a callback
 * The BroadcastReceiver onReceive code also want to minimize the time consuming, it is recommended to use IntentService processing.
 
-**16. Android Memory optimationzan Techniques.**
+####Android Memory optimationzan Techniques
 
 http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0920/3478.html
 
@@ -507,20 +503,20 @@ http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0920/3478.html
 5）Ontouch method perform object created inside
 6）StringBuilder
 
-**17. What are some of modes of communication between Android Service with the Activity?**
+####What are some of modes of communication between Android Service with the Activity
 
 * Through a Binder object
 * Through the broadcast in the form of (radio)
 
-**18. The difference between Android API versions**
+####The difference between Android API versions
 
 http://blog.csdn.net/lijun952048910/article/details/7980562
 
-**19. Implementation in the Android WAP way connected to the Internet**
+####Implementation in the Android WAP way connected to the Internet
 
 http://blog.csdn.net/asce1885/article/details/7844159
 
-**20. How to ensure that the service does not get killed in background?**
+####How to ensure that the service does not get killed in background
 
 Return to START_STICKY onStartCommand method
 
@@ -560,7 +556,7 @@ Service + broadcast mode, that is, when the service go ondestory, send a custom 
 
 Through some broadcasting system, such as: mobile phone restart, interface sensei, application state changes, and so on to monitor and capture, then judge whether our Service also live, don't forget to add permissions.
 
-**21. Requestlayout onlayout, ontouch, DrawChild differences and their relationship.**
+####Requestlayout onlayout, ontouch, DrawChild differences and their relationship
 
 RequestLayout() method, can lead to call measure () process and layout () process.Description: just back to the View tree layout layout process includes the measure () and layout () procedure, don't call the draw () procedure, but not redrawnAny view including the caller itself.
 
@@ -570,19 +566,19 @@ Calling ontouch() method draw View itself (each View to override this method, Vi
 
 DrawChild() to the callback for each child view the draw () method
 
-**22. What is the difference between invalidate() and postInvalidate()?**
+####What is the difference between invalidate() and postInvalidate()
 
 http://blog.csdn.net/mars2639/article/details/6650876
 
-**23. How Android animation framework works?**
+####How Android animation framework works
 
 Animation framework defines transparency, rotate, scale and displacement of several common Animation, and control the whole View, the realization principle is every time map View in the View of ViewGroup drawChild function to get the View the Animation of the Transformation of value, and then call canvas. The concat (transformToApply. GetMatrix ()), through the matrix operations complete Animation frames, if there is no complete Animation, continue to call invalidate () function, start the next map to drive the Animation, Animation in the process of clearance between the frame time is consumed by a mapping function, may cause Animation consume more CPU resources, the most important thing is, Animation change just show, and not the corresponding event.
 
-**24. Android application memory limit**
+####Android application memory limit
 
 It varies with screen size and android versions, however the android program memory is generally limited to 16 mb as in android 4.1.
 
-**25. Describe View refresh mechanism in Android.**
+####Describe View refresh mechanism in Android
 
 Object by ViewRoot performTraversals () method calls the draw () method to draw the tree View, it is worth noting that every time a drawing, does not redraw each View tree View, and will only be redraw those who "need to redraw the View, the View class internal variable contains a sign DRAWN, when the View needs to redraw, will be for the View to add the logo.
 
@@ -595,7 +591,7 @@ mView.draw() began to draw，draw() methods the functions as follows：
 3. Calling ontouch() method draw View itself (each View to override this method, ViewGroup don't need to implement the method)
 4. Call dispatchDraw() method draw child views (if the View type of ViewGroup that does not contain child views, do not need to reload the method) is worth, ViewGroup class has been rewritten for us dispatchDraw() function implementation, application generally does not need to rewrite the method, but you can override the parent class function to achieve specific functions.
 
-**26. LinearLayout contrast RelativeLayout.**
+####LinearLayout contrast RelativeLayout
 
 1. RelativeLayout can let the child View call two onMeasure, LinearLayout in weight, also can call onMeasure View2 times
 2. RelativeLayout child View if different height and RelativeLayout, will lead to efficiency, when the View is very complex, this problem will be more serious.If you can, try to use padding instead of margin.
@@ -603,7 +599,7 @@ mView.draw() began to draw，draw() methods the functions as follows：
 
 Finally, consider the question of opening the contradiction, why Google to developers default has built a RelativeLayout, in using a LinearLayout DecorView on yourself.Because of the depth of the hierarchy of DecorView is known and fixed, a title bar above, below a NaRongLan.Using RelativeLayout will not reduce the levels of depth, so at this point on the root node using LinearLayout is the most efficient.And the reason for developers default has built a RelativeLayout is a hope that developers can use less as far as possible to express the View hierarchy layout to achieve optimal performance, because the View of complex nested will be a greater impact on performance.
 
-**27. Optimization of the custom view**
+####Optimization of the custom view
 
 In order to speed up your view, for the method called frequently, need to try to reduce unnecessary code.Begin with ontouch, need special attention should not be here to do the memory allocation, because it will lead to the GC, resulting in caton.During the initialization or animation clearance do allocate memory.Don't do memory allocation when animation is executing.
 
@@ -613,34 +609,34 @@ Another very time-consuming operation is requested layout.At any time to perform
 
 If you have a complex UI, you should consider writing a custom ViewGroup to perform his layout operations.With built-in view is different, the custom view can make the program simply measure the part, this avoids to traverse the entire view hierarchy to calculate the size.The PieChart example shows how to inherit the ViewGroup as part of a custom view.PieChart have child views, but it never measure them.But according to the laws of his own layout, the size of the set them directly.
 
-**28. What are ContentProviders?**
+####What are ContentProviders
 
 http://blog.csdn.net/coder_pig/article/details/47858489
 
-**29. Life cycle of Fragments.**
+####Life cycle of Fragments
 
 ![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/fragment-life.png)
 
-**30. Volley Networking Library.**
+####Volley Networking Library
 
 http://a.codekk.com/detail/Android/grumoon/Volley%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90
 
-**31. Glide Library.**
+####Glide Library
 
 http://www.lightskystreet.com/2015/10/12/glide_source_analysis/
 http://frodoking.github.io/2015/10/10/android-glide/
 
-**32. Design Patterns in Android.**
+####Design Patterns in Android
 
 http://blog.csdn.net/bboyfeiyu/article/details/44563871
 
-**33. Architecture design**
+####Architecture design
 
 ![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/architucture.png)
 
 http://www.tianmaying.com/tutorial/AndroidMVC
 
-**34. Android attribute animation features.**
+####Android attribute animation features
 
 If you only need to View in the demand of the mobile, zoom, rotate and fades operation, then fill between animation is enough for the sound.But obviously, these functions is not enough to cover all of the scene, once we demand beyond the mobile, zoom, rotate and fade out of these four, to the operation of the View that filling between the animation will not be able to help us again, that is to say it in terms of function and extensible has considerable limitations, so let's take a look at between animation is not up to the scene.
 
