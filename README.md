@@ -146,11 +146,7 @@ java.lang.StringBuilder
 
 java.lang.StringBuilder a mutable sequence of characters is the new 5.0.This provides an API compatible with StringBuffer, but does not guarantee that synchronization.This class is designed to be used as a replacement of a simple StringBuffer, when used in string buffer is used by a single thread (this is very common). If possible, it is recommended that the priority use this class, because in most implementations, it is faster than StringBuffer.Both methods are basically the same.
 
-<<<<<<< HEAD
 ####Explain polymorphism in Java
-=======
-**17. Explain polymorphism in Java.**
->>>>>>> 2024a05a845725f99f5903b53b2f065e83ddaabe
 
 The understanding of Java polymorphism
 
@@ -222,11 +218,7 @@ When it comes to block, that is to talk about a deadlock, slightly analysis can 
 
 Above we implemented in Java thread blocking the various methods for the analysis, we analyzed the wait() and notify() method, because they are the most powerful, use is also the most flexible, but it also leads to low efficiency, the more error prone.We should be flexible use of various methods in practical use, in order to better achieve our purpose.
 
-<<<<<<< HEAD
 ####What is the difference between an abstract class and interface
-=======
-**19. What is the difference between an abstract class and interface?**
->>>>>>> 2024a05a845725f99f5903b53b2f065e83ddaabe
 
 1. The realization of the default method:
 An abstract class can have a default method is completely abstract.The realization of the interface method doesn't exist
@@ -253,11 +245,7 @@ Interface is a little slow, because it need time to find the method to realize i
 If you have to add a new method in an abstract class, you can give it the default implementation. So you don't need to change your code now.
 If you added a new method to the interface, then you have to change the class implementation of that interface.
 
-<<<<<<< HEAD
 ####What is the difference between container classes
-=======
-**20. Collection Framework in Java.**
->>>>>>> 2024a05a845725f99f5903b53b2f065e83ddaabe
 
 http://www.cnblogs.com/yuanermen/archive/2009/08/05/1539917.html<br>
 http://alexyyek.github.io/2015/04/06/Collection/<br>
@@ -270,11 +258,7 @@ For english readers: http://www.javatpoint.com/collections-in-java
 http://www.cnblogs.com/chenssy/p/3388487.html
 For english language users: http://www.tutorialspoint.com/java/java_innerclasses.htm
 
-<<<<<<< HEAD
 ####What is HashMap?Differentiate between a HashMap and HashTable in Java
-=======
-**22. What is HashMap? Differentiate between a HashMap and HashTable in Java.**
->>>>>>> 2024a05a845725f99f5903b53b2f065e83ddaabe
 
 http://www.233.com/ncre2/JAVA/jichu/20100717/084230917.html
 For english language users: http://www.javatpoint.com/difference-between-hashmap-and-hashtable
@@ -297,11 +281,7 @@ Because of radio data transmission in the application scope, don't have to worry
 Don't have to worry about other application forge the broadcast, cause potential safety hazard.
 Compared to send global broadcast in the system, it is more efficient.
 
-<<<<<<< HEAD
 ####Have you used intentService? What is the function of intentService? Does AIDL has solved the problem
-=======
-**3. Have you used intentService? What is the usage of intentService? Does AIDL has solved the problem?**
->>>>>>> 2024a05a845725f99f5903b53b2f065e83ddaabe
 
 To generate a default and independent of each other than the main thread to execute all sent to onStartCommand () method of Intetnt.
 
@@ -594,11 +574,7 @@ http://blog.csdn.net/mars2639/article/details/6650876
 
 Animation framework defines transparency, rotate, scale and displacement of several common Animation, and control the whole View, the realization principle is every time map View in the View of ViewGroup drawChild function to get the View the Animation of the Transformation of value, and then call canvas. The concat (transformToApply. GetMatrix ()), through the matrix operations complete Animation frames, if there is no complete Animation, continue to call invalidate () function, start the next map to drive the Animation, Animation in the process of clearance between the frame time is consumed by a mapping function, may cause Animation consume more CPU resources, the most important thing is, Animation change just show, and not the corresponding event.
 
-<<<<<<< HEAD
 ####Android for each application allocated memory size is it
-=======
-**24. Android application memory limit**
->>>>>>> 2024a05a845725f99f5903b53b2f065e83ddaabe
 
 It varies with screen size and android versions, however the android program memory is generally limited to 16 mb as in android 4.1.
 
@@ -615,11 +591,7 @@ mView.draw() began to draw，draw() methods the functions as follows：
 3. Calling ontouch() method draw View itself (each View to override this method, ViewGroup don't need to implement the method)
 4. Call dispatchDraw() method draw child views (if the View type of ViewGroup that does not contain child views, do not need to reload the method) is worth, ViewGroup class has been rewritten for us dispatchDraw() function implementation, application generally does not need to rewrite the method, but you can override the parent class function to achieve specific functions.
 
-<<<<<<< HEAD
 ####LinearLayout contrast RelativeLayout
-=======
-**26. LinearLayout contrast RelativeLayout.**
->>>>>>> 2024a05a845725f99f5903b53b2f065e83ddaabe
 
 1. RelativeLayout can let the child View call two onMeasure, LinearLayout in weight, also can call onMeasure View2 times
 2. RelativeLayout child View if different height and RelativeLayout, will lead to efficiency, when the View is very complex, this problem will be more serious.If you can, try to use padding instead of margin.
@@ -627,11 +599,7 @@ mView.draw() began to draw，draw() methods the functions as follows：
 
 Finally, consider the question of opening the contradiction, why Google to developers default has built a RelativeLayout, in using a LinearLayout DecorView on yourself.Because of the depth of the hierarchy of DecorView is known and fixed, a title bar above, below a NaRongLan.Using RelativeLayout will not reduce the levels of depth, so at this point on the root node using LinearLayout is the most efficient.And the reason for developers default has built a RelativeLayout is a hope that developers can use less as far as possible to express the View hierarchy layout to achieve optimal performance, because the View of complex nested will be a greater impact on performance.
 
-<<<<<<< HEAD
-####To optimize the custom view
-=======
-**27. Optimization of the custom view**
->>>>>>> 2024a05a845725f99f5903b53b2f065e83ddaabe
+####Optimization of the custom view
 
 In order to speed up your view, for the method called frequently, need to try to reduce unnecessary code.Begin with ontouch, need special attention should not be here to do the memory allocation, because it will lead to the GC, resulting in caton.During the initialization or animation clearance do allocate memory.Don't do memory allocation when animation is executing.
 
