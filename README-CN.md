@@ -650,8 +650,7 @@ service +broadcast  方式，就是当service走ondestory的时候，发送一�
 ####Requestlayout,onlayout,onDraw,DrawChild区别与联系-猎豹
 
 requestLayout()方法 ：会导致调用measure()过程 和 layout()过程 。
-说明：只是对View树重新布局layout过程包括measure()和layout()过程，不会调用draw()过程，但不会重新绘制
-任何视图包括该调用者本身。
+将会根据标志位判断是否需要ondraw
 
 onLayout()方法(如果该View是ViewGroup对象，需要实现该方法，对每个子视图进行布局)
 
