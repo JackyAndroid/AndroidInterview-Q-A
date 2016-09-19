@@ -85,10 +85,6 @@ http://blog.csdn.net/tiantiandjava/article/details/46988461
 2. The data structure of a HashMap：
 	In the Java programming language, the basic structure is two kinds, one is an array, and another is to simulate a pointer (reference), all of the data structure can be used both to construct the basic structure, HashMap is no exception.HashMap is actually a "linked list hash data structure, which is a combination of array and chain table.
 
-![](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/picture/hashmap.jpg)
-	
-Can be seen from the diagram above, a HashMap in the underlying structure is an array, each item in the array and a linked list. When a new HashMap will initialize an array.
-
 ####Define Java state machine
 
 http://www.jdon.com/designpatterns/designpattern_State.htm
