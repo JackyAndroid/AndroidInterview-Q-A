@@ -75,6 +75,7 @@ GitHub: https://github.com/JackyAndroid
 
 * [公司专题]()
 	*  [阿里巴巴](#阿里面试题)
+	*  [腾讯](#腾讯)
 
 
 ###java
@@ -858,4 +859,17 @@ public boolean isPalindrome(String palindrome){
 
 #### 烧一根不均匀的绳，从头烧到尾总共需要1个小时。现在有若干条材质相同的绳子，问如何用烧绳的方法来计时一个小时十五分钟呢
 用两根绳子，一个绳子两头烧，一个一头烧。
+
+### 腾讯
+#### 2000万个整数，找出第五十大的数字？
+冒泡、选择、建堆
+#### 从网络加载一个10M的图片，说下注意事项
+图片缓存、异常恢复、质量压缩
+#### 自定义View注意事项
+渲染帧率、内存
+#### 项目中常用的设计模式
+单例、观察者、适配器、建造者。。
+#### JVM的理解
+[http://www.infoq.com/cn/articles/java-memory-model-1
+](http://www.infoq.com/cn/articles/java-memory-model-1)
 
