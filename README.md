@@ -1,8 +1,8 @@
-###Welcome to follow me on GitHub or CSDN
+###Welcome to follow me on GitHub or Gold
 
 GitHub: https://github.com/JackyAndroid
 
-CSDN: http://blog.csdn.net/rain_butterfly
+Gold: https://gold.xitu.io/user/562dc7cc60b20fc9817962a2
 
 [中文版文档](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/README-CN.md)
 
