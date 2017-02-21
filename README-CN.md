@@ -74,7 +74,7 @@ GitHub: https://github.com/JackyAndroid
 	* [Android属性动画特性-乐视-小米](#Android属性动画特性-乐视-小米)
 
 * [公司专题]()
-	*  [阿里巴巴]()
+	*  [阿里巴巴](#阿里面试题)
 
 
 ###java
@@ -792,7 +792,7 @@ http://wangkuiwu.github.io/2014/08/26/MessageQueue/
 #### 自定义控件原理
 http://www.jianshu.com/p/988326f9c8a3
 
-### binder工作原理
+#### binder工作原理
 Binder是客户端和服务端进行通讯的媒介
 
 #### ActivityThread，Ams，Wms的工作原理
