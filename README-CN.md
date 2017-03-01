@@ -744,16 +744,16 @@ http://www.tianmaying.com/tutorial/AndroidMVC
 
 最后，补间动画还有一个致命的缺陷，就是它只是改变了View的显示效果而已，而不会真正去改变View的属性。什么意思呢？比如说，现在屏幕的左上角有一个按钮，然后我们通过补间动画将它移动到了屏幕的右下角，现在你可以去尝试点击一下这个按钮，点击事件是绝对不会触发的，因为实际上这个按钮还是停留在屏幕的左上角，只不过补间动画将这个按钮绘制到了屏幕的右下角而已。
 
-## 专题
-### 性能优化
+### 专题
+#### 性能优化
 1. [Android性能优化典范 - 第1季](http://hukai.me/android-performance-patterns/)
 2. [Android性能优化典范 - 第2季](http://hukai.me/android-performance-patterns-season-2/)
 3. [Android性能优化典范 - 第3季](http://hukai.me/android-performance-patterns-season-3/)
 4. [Android性能优化典范 - 第4季](http://hukai.me/android-performance-patterns-season-4/)
 5. [Android性能优化典范 - 第5季](http://hukai.me/android-performance-patterns-season-5/)
 
-### 阿里面试题
-#### 进程间通信方式
+#### 阿里面试题
+##### 进程间通信方式
 1. 通过Intent在Activity、Service或BroadcastReceiver间进行进程间通信，可通过Intent传递数据
 2. AIDL方式
 3. Messenger方式
@@ -761,67 +761,67 @@ http://www.tianmaying.com/tutorial/AndroidMVC
 5. Socket方式
 6. 基于文件共享的方式
 
-#### 什么是协程
+##### 什么是协程
 我们知道多个线程相对独立，有自己的上下文，切换受系统控制；而协程也相对独立，有自己的上下文，但是其切换由自己控制，由当前协程切换到其他协程由当前协程来控制。
 ￼
-#### 内存泄露是怎么回事
+##### 内存泄露是怎么回事
 由忘记释放分配的内存导致的
 
-#### 程序计数器，引到了逻辑地址（虚地址）和物理地址及其映射关系
+##### 程序计数器，引到了逻辑地址（虚地址）和物理地址及其映射关系
 虚拟机中的程序计数器是Java运行时数据区中的一小块内存区域，但是它的功能和通常的程序计数器是类似的，它指向虚拟机正在执行字节码指令的地址。具体点儿说，当虚拟机执行的方法不是native的时，程序计数器指向虚拟机正在执行字节码指令的地址；当虚拟机执行的方法是native的时，程序计数器中的值是未定义的。另外，程序计数器是线程私有的，也就是说，每一个线程都拥有仅属于自己的程序计数器。
 
-#### 数组和链表的区别
+##### 数组和链表的区别
 数组是将元素在内存中连续存放，由于每个元素占用内存相同，可以通过下标迅速访问数组中任何元素。但是如果要在数组中增加一个元素，需要移动大量元素，在内存中空出一个元素的空间，然后将要增加的元素放在其中。同样的道理，如果想删除一个元素，同样需要移动大量元素去填掉被移动的元素。如果应用需要快速访问数据，很少或不插入和删除元素，就应该用数组。
 
 链表恰好相反，链表中的元素在内存中不是顺序存储的，而是通过存在元素中的指针联系到一起。比如：上一个元素有个指针指到下一个元素，以此类推，直到最后一个元素。如果要访问链表中一个元素，需要从第一个元素开始，一直找到需要的元素位置。但是增加和删除一个元素对于链表数据结构就非常简单了，只要修改元素中的指针就可以了。如果应用需要经常插入和删除元素你就需要用链表数据结构了。
 
-#### 二叉树的深度优先遍历和广度优先遍历的具体实现
+##### 二叉树的深度优先遍历和广度优先遍历的具体实现
 http://www.i3geek.com/archives/794
 
-#### 堆的结构
+##### 堆的结构
 年轻代（Young Generation）、年老代（Old Generation）和持久代（Permanent 
 Generation）。其中持久代主要存放的是Java类的类信息，与垃圾收集要收集的Java对象关系
 不大。年轻代和年老代的划分是对垃 圾收集影响比较大的。
 
-#### bitmap对象的理解
+##### bitmap对象的理解
 http://blog.csdn.net/angel1hao/article/details/51890938
 
-#### 什么是深拷贝和浅拷
+##### 什么是深拷贝和浅拷
 浅拷贝：使用一个已知实例对新创建实例的成员变量逐个赋值，这个方式被称为浅拷贝。
 深拷贝：当一个类的拷贝构造方法，不仅要复制对象的所有非引用成员变量值，还要为引用类型的成员变量创建新的实例，并且初始化为形式参数实例值。这个方式称为深拷贝
 
-#### 对象锁和类锁是否会互相影响
+##### 对象锁和类锁是否会互相影响
 对象锁：Java的所有对象都含有1个互斥锁，这个锁由JVM自动获取和释放。线程进入synchronized方法的时候获取该对象的锁，当然如果已经有线程获取了这个对象的锁，那么当前线程会等待；synchronized方法正常返回或者抛异常而终止，JVM会自动释放对象锁。这里也体现了用synchronized来加锁的1个好处，方法抛异常的时候，锁仍然可以由JVM来自动释放。
 类锁： 对象锁是用来控制实例方法之间的同步，类锁是用来控制静态方法（或静态变量互斥体）之间的同步。其实类锁只是一个概念上的东西，并不是真实存在的，它只是用来帮助我们理解锁定实例方法和静态方法的区别的。我们都知道，java类可能会有很多个对象，但是只有1个Class对象，也就是说类的不同实例之间共享该类的Class对象。Class对象其实也仅仅是1个java对象，只不过有点特殊而已。由于每个java对象都有1个互斥锁，而类的静态方法是需要Class对象。所以所谓的类锁，不过是Class对象的锁而已。获取类的Class对象有好几种，最简单的就是MyClass.class的方式。
 类锁和对象锁不是同1个东西，一个是类的Class对象的锁，一个是类的实例的锁。也就是说：1个线程访问静态synchronized的时候，允许另一个线程访问对象的实例synchronized方法。反过来也是成立的，因为他们需要的锁是不同的。
 
-#### looper架构
+##### looper架构
 http://wangkuiwu.github.io/2014/08/26/MessageQueue/
 
-#### 自定义控件原理
+##### 自定义控件原理
 http://www.jianshu.com/p/988326f9c8a3
 
-#### binder工作原理
+##### binder工作原理
 Binder是客户端和服务端进行通讯的媒介
 
-#### ActivityThread，Ams，Wms的工作原理
+##### ActivityThread，Ams，Wms的工作原理
 ActivityThread: 运行在应用进程的主线程上，响应 ActivityManangerService 启动、暂停Activity，广播接收等消息。
 ams:统一调度各应用程序的Activity、内存管理、进程管理
 
-#### Java中final，finally，finalize的区别
+##### Java中final，finally，finalize的区别
 * final 用于声明属性,方法和类, 分别表示属性不可变, 方法不可覆盖, 类不可继承. 
 * finally 是异常处理语句结构的一部分，表示总是执行. 
 * finalize 是Object类的一个方法，在垃圾收集器执行的时候会调用被回收对象的此方法，可以覆盖此方法提供垃圾收集时的其他资源回收，例如关闭文件等. JVM不保证此方法总被调用.
 
-#### 一个文件中有100万个整数，由空格分开，在程序中判断用户输入的整数是否在此文件中。说出最优的方法
+##### 一个文件中有100万个整数，由空格分开，在程序中判断用户输入的整数是否在此文件中。说出最优的方法
 
-#### 两个进程同时要求写或者读，能不能实现？如何防止进程的同步？
+##### 两个进程同时要求写或者读，能不能实现？如何防止进程的同步？
 
-#### volatile 的意义？
+##### volatile 的意义？
 
 防止CPU指令重排序
 
-#### 单例
+##### 单例
 
 ```
 public class Singleton{
@@ -837,7 +837,7 @@ return sSingleton;
 }
 ```
 
-#### Given a string, determine if it is a palindrome（回文，如果不清楚，按字面意思脑补下）, considering only alphanumeric characters and ignoring cases.  
+##### Given a string, determine if it is a palindrome（回文，如果不清楚，按字面意思脑补下）, considering only alphanumeric characters and ignoring cases.  
 
 For example,  "A man, a plan, a canal: Panama" is a palindrome.  "race a car" is not a palindrome.  
 
@@ -865,19 +865,19 @@ public boolean isPalindrome(String palindrome){
 }
 ```
 
-#### 烧一根不均匀的绳，从头烧到尾总共需要1个小时。现在有若干条材质相同的绳子，问如何用烧绳的方法来计时一个小时十五分钟呢
+##### 烧一根不均匀的绳，从头烧到尾总共需要1个小时。现在有若干条材质相同的绳子，问如何用烧绳的方法来计时一个小时十五分钟呢
 用两根绳子，一个绳子两头烧，一个一头烧。
 
-### 腾讯
-#### 2000万个整数，找出第五十大的数字？
+#### 腾讯
+##### 2000万个整数，找出第五十大的数字？
 冒泡、选择、建堆
-#### 从网络加载一个10M的图片，说下注意事项
+##### 从网络加载一个10M的图片，说下注意事项
 图片缓存、异常恢复、质量压缩
-#### 自定义View注意事项
+##### 自定义View注意事项
 渲染帧率、内存
-#### 项目中常用的设计模式
+##### 项目中常用的设计模式
 单例、观察者、适配器、建造者。。
-#### JVM的理解
+##### JVM的理解
 [http://www.infoq.com/cn/articles/java-memory-model-1
 ](http://www.infoq.com/cn/articles/java-memory-model-1)
 
