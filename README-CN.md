@@ -753,7 +753,8 @@ http://www.tianmaying.com/tutorial/AndroidMVC
 5. [Android性能优化典范 - 第5季](http://hukai.me/android-performance-patterns-season-5/)
 
 ### 架构分析
-
+[MVVM](http://tech.meituan.com/android_mvvm.html)
+[MVP](https://code.tutsplus.com/series/how-to-adopt-model-view-presenter-on-android--cms-1012)
 
 ### 阿里面试题
 #### 进程间通信方式
