@@ -745,6 +745,7 @@ http://www.tianmaying.com/tutorial/AndroidMVC
 最后，补间动画还有一个致命的缺陷，就是它只是改变了View的显示效果而已，而不会真正去改变View的属性。什么意思呢？比如说，现在屏幕的左上角有一个按钮，然后我们通过补间动画将它移动到了屏幕的右下角，现在你可以去尝试点击一下这个按钮，点击事件是绝对不会触发的，因为实际上这个按钮还是停留在屏幕的左上角，只不过补间动画将这个按钮绘制到了屏幕的右下角而已。
 
 ### 专题
+
 ### 性能优化
 1. [Android性能优化典范 - 第1季](http://hukai.me/android-performance-patterns/)
 2. [Android性能优化典范 - 第2季](http://hukai.me/android-performance-patterns-season-2/)
@@ -754,6 +755,7 @@ http://www.tianmaying.com/tutorial/AndroidMVC
 
 ### 架构分析
 [MVVM](http://tech.meituan.com/android_mvvm.html)
+
 [MVP](https://code.tutsplus.com/series/how-to-adopt-model-view-presenter-on-android--cms-1012)
 
 ### 阿里面试题
