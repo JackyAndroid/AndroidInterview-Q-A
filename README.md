@@ -1,8 +1,6 @@
-###Welcome to follow me on GitHub or Gold
+###Welcome to follow me on GitHub
 
 GitHub: https://github.com/JackyAndroid
-
-Gold: https://gold.xitu.io/user/562dc7cc60b20fc9817962a2
 
 [中文版文档](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/README-CN.md)
 
