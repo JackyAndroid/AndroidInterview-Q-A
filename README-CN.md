@@ -750,12 +750,13 @@ http://www.tianmaying.com/tutorial/AndroidMVC
 ### 专题
 
 ### 性能优化
-1. [Android性能优化典范 - 第1季](http://hukai.me/android-performance-patterns/)
-2. [Android性能优化典范 - 第2季](http://hukai.me/android-performance-patterns-season-2/)
-3. [Android性能优化典范 - 第3季](http://hukai.me/android-performance-patterns-season-3/)
-4. [Android性能优化典范 - 第4季](http://hukai.me/android-performance-patterns-season-4/)
-5. [Android性能优化典范 - 第5季](http://hukai.me/android-performance-patterns-season-5/)
-6. [官方性能优化系列教程](https://www.youtube.com/playlist?list=PLWz5rJ2EKKc9CBxr3BVjPTPoDPLdPIFCE)
+
+#### [Android性能优化典范 - 第1季](http://hukai.me/android-performance-patterns/)
+#### [Android性能优化典范 - 第2季](http://hukai.me/android-performance-patterns-season-2/)
+#### [Android性能优化典范 - 第3季](http://hukai.me/android-performance-patterns-season-3/)
+#### [Android性能优化典范 - 第4季](http://hukai.me/android-performance-patterns-season-4/)
+#### [Android性能优化典范 - 第5季](http://hukai.me/android-performance-patterns-season-5/)
+#### [官方性能优化系列教程](https://www.youtube.com/playlist?list=PLWz5rJ2EKKc9CBxr3BVjPTPoDPLdPIFCE)
 
 ### 架构分析
 [MVVM](http://tech.meituan.com/android_mvvm.html)
