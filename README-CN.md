@@ -791,6 +791,19 @@ http://www.tianmaying.com/tutorial/AndroidMVC
 18. **The Performance Lifecycle** Gather：收集数据，Insight：分析数据，Action：解决问题
 
 #### [Android性能优化典范 - 第3季](http://hukai.me/android-performance-patterns-season-3/)
+1. **Fun with ArrayMaps** 为了解决HashMap更占内存的弊端，Android提供了内存效率更高的ArrayMap。它内部使用两个数组进行工作，其中一个数组记录key hash过后的顺序列表，另外一个数组按key的顺序记录Key-Value值
+2. **Beware Autoboxing** 有时候性能问题也可能是因为那些不起眼的小细节引起的，例如在代码中不经意的“自动装箱”。我们知道基础数据类型的大小：boolean(8 bits), int(32 bits), float(32 bits)，long(64 bits)，为了能够让这些基础数据类型在大多数Java容器中运作，会需要做一个autoboxing的操作，转换成Boolean，Integer，Float等对象
+3. **SparseArray Family Ties** 为了避免HashMap的autoboxing行为，Android系统提供了SparseBoolMap，SparseIntMap，SparseLongMap，LongSparseMap等容器。
+4. **The price of ENUMs** Android官方强烈建议不要在Android程序里面使用到enum。
+5. **Trimming and Sharing Memory** Android系统提供了一些回调来通知应用的内存使用情况，通常来说，当所有的background应用都被kill掉的时候，forground应用会收到onLowMemory()的回调。在这种情况下，需要尽快释放当前应用的非必须内存资源，从而确保系统能够稳定继续运行。Android系统还提供了onTrimMemory()的回调，当系统内存达到某些条件的时候，所有正在运行的应用都会收到这个回调
+6. **DO NOT LEAK VIEWS** 避免使用异步回调,避免使用Static对象,避免把View添加到没有清除机制的容器里面
+7. **Location & Battery Drain** 其中存在的一个优化点是，我们可以通过判断返回的位置信息是否相同，从而决定设置下次的更新间隔是否增加一倍，通过这种方式可以减少电量的消耗
+8. **Double Layout Taxation** 布局中的任何一个View一旦发生一些属性变化，都可能引起很大的连锁反应。例如某个button的大小突然增加一倍，有可能会导致兄弟视图的位置变化，也有可能导致父视图的大小发生改变。当大量的layout()操作被频繁调用执行的时候，就很可能引起丢帧的现象。
+9. **Network Performance 101** 减少移动网络被激活的时间与次数,压缩传输数据
+10. **Effective Network Batching** 发起网络请求与接收返回数据都是比较耗电的，在网络硬件模块被激活之后，会继续保持几十秒的电量消耗，直到没有新的网络操作行为之后，才会进入休眠状态。前面一个段落介绍了使用Batching的技术来捆绑网络请求，从而达到减少网络请求的频率。那么如何实现Batching技术呢？通常来说，我们可以会把那些发出的网络请求，先暂存到一个PendingQueue里面，等到条件合适的时候再触发Queue里面的网络请求。
+11. **Optimizing Network Request Frequencies** 前面的段落已经提到了应该减少网络请求的频率，这是为了减少电量的消耗。我们可以使用Batching，Prefetching的技术来避免频繁的网络请求。Google提供了GCMNetworkManager来帮助开发者实现那些功能，通过提供的API，我们可以选择在接入WiFi，开始充电，等待移动网络被激活等条件下再次激活网络请求。
+12. **Effective Prefetching** 类似上面的情况会频繁触发网络请求，但是如果我们能够预先请求后续可能会使用到网络资源，避免频繁的触发网络请求，这样就能够显著的减少电量的消耗。可是预先获取多少数据量是很值得考量的，因为如果预取数据量偏少，就起不到减少频繁请求的作用，可是如果预取数据过多，就会造成资源的浪费。
+
 #### [Android性能优化典范 - 第4季](http://hukai.me/android-performance-patterns-season-4/)
 #### [Android性能优化典范 - 第5季](http://hukai.me/android-performance-patterns-season-5/)
 #### [官方性能优化系列教程](https://www.youtube.com/playlist?list=PLWz5rJ2EKKc9CBxr3BVjPTPoDPLdPIFCE)
