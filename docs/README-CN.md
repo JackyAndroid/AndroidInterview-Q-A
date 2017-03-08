@@ -914,17 +914,20 @@ ams:统一调度各应用程序的Activity、内存管理、进程管理
 
 #### 单例
 
-```
+```java
 public class Singleton{
-private static volatile Singleton sSingleton;
-private Singleton{
+private volatile static Singleton mSingleton;
+private Singleton(){
 }
 public static Singleton getInstance(){
- if(sSingleton == null){
-    sSingleton = new Singleton();   
-}
-return sSingleton;
-}
+  if(mSingleton == null){\\A
+    synchronized(Singleton.class){\\C
+     if(mSingleton == null)
+      mSingleton = new Singleton();\\B
+      }
+    }
+    return mSingleton;
+  }
 }
 ```
 
