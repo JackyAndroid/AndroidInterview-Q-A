@@ -510,9 +510,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../android/Activity,Window,View三者的差别，fragment的特点？-360.md">
+        <li class="chapter " data-level="1.4.4" data-path="../android/activity-window-view三者的差别-fragment的特点-360.html">
             
-                <span>
+                <a href="../android/activity-window-view三者的差别-fragment的特点-360.html">
             
                     
                     Activity,Window,View三者的差别，fragment的特点？-360
@@ -744,9 +744,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.22" data-path="../android/invalidate(">
+        <li class="chapter " data-level="1.4.22" data-path="../android/invalidate和postInvalidate的区别及使用-百度.html">
             
-                <span>
+                <a href="../android/invalidate和postInvalidate的区别及使用-百度.html">
             
                     
                     invalidate()和postInvalidate() 的区别及使用-百度
@@ -1107,29 +1107,30 @@ ams:&#x7EDF;&#x4E00;&#x8C03;&#x5EA6;&#x5404;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7
 <h4 id="given-a-string-determine-if-it-is-a-palindrome&#xFF08;&#x56DE;&#x6587;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x6E05;&#x695A;&#xFF0C;&#x6309;&#x5B57;&#x9762;&#x610F;&#x601D;&#x8111;&#x8865;&#x4E0B;&#xFF09;-considering-only-alphanumeric-characters-and-ignoring-cases">Given a string, determine if it is a palindrome&#xFF08;&#x56DE;&#x6587;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x6E05;&#x695A;&#xFF0C;&#x6309;&#x5B57;&#x9762;&#x610F;&#x601D;&#x8111;&#x8865;&#x4E0B;&#xFF09;, considering only alphanumeric characters and ignoring cases.</h4>
 <p>For example,  &quot;A man, a plan, a canal: Panama&quot; is a palindrome.  &quot;race a car&quot; is not a palindrome.  </p>
 <p>Note:  Have you consider that the string might be empty? This is a good question to ask during an interview.  For the purpose of this problem, we define empty string as valid palindrome.</p>
-<pre><code>public boolean isPalindrome(String palindrome){
-        char[] palindromes = palidrome.toCharArray();
-         if(palindromes.lengh == 0){
-             return true
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isPalindrome</span><span class="hljs-params">(String palindrome)</span></span>{
+        <span class="hljs-keyword">char</span>[] palindromes = palidrome.toCharArray();
+         <span class="hljs-keyword">if</span>(palindromes.lengh == <span class="hljs-number">0</span>){
+             <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>
          }
-         Arraylist&lt;Char&gt; temp = new Arraylist();
-         for(int i=0;i&lt;palindromes.length;i++){
-         if((palindromes[i]&gt;&apos;a&apos; &amp;&amp; palindromes[i]&lt;&apos;z&apos;)||palindromes[i]&gt;&apos;A&apos; &amp;&amp; palindromes[i]&lt;&apos;Z&apos;)){
+         Arraylist&lt;Char&gt; temp = <span class="hljs-keyword">new</span> Arraylist();
+         <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;palindromes.length;i++){
+         <span class="hljs-keyword">if</span>((palindromes[i]&gt;<span class="hljs-string">&apos;a&apos;</span> &amp;&amp; palindromes[i]&lt;<span class="hljs-string">&apos;z&apos;</span>)||palindromes[i]&gt;<span class="hljs-string">&apos;A&apos;</span> &amp;&amp; palindromes[i]&lt;<span class="hljs-string">&apos;Z&apos;</span>)){
          temp.add(palindromes[i].toLowerCase());
          }
         }
-         for(int i=0;i&lt;temp.size()/2;i++){
-         if(temp.get(i) != temp.get(temp.size()-i)){
-         //
-         return false;
+         <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;temp.size()/<span class="hljs-number">2</span>;i++){
+         <span class="hljs-keyword">if</span>(temp.get(i) != temp.get(temp.size()-i)){
+         <span class="hljs-comment">//</span>
+         <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
          }
          }
-         return true;
+         <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
 }
-</code></pre><h4 id="&#x70E7;&#x4E00;&#x6839;&#x4E0D;&#x5747;&#x5300;&#x7684;&#x7EF3;&#xFF0C;&#x4ECE;&#x5934;&#x70E7;&#x5230;&#x5C3E;&#x603B;&#x5171;&#x9700;&#x8981;1&#x4E2A;&#x5C0F;&#x65F6;&#x3002;&#x73B0;&#x5728;&#x6709;&#x82E5;&#x5E72;&#x6761;&#x6750;&#x8D28;&#x76F8;&#x540C;&#x7684;&#x7EF3;&#x5B50;&#xFF0C;&#x95EE;&#x5982;&#x4F55;&#x7528;&#x70E7;&#x7EF3;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x8BA1;&#x65F6;&#x4E00;&#x4E2A;&#x5C0F;&#x65F6;&#x5341;&#x4E94;&#x5206;&#x949F;&#x5462;">&#x70E7;&#x4E00;&#x6839;&#x4E0D;&#x5747;&#x5300;&#x7684;&#x7EF3;&#xFF0C;&#x4ECE;&#x5934;&#x70E7;&#x5230;&#x5C3E;&#x603B;&#x5171;&#x9700;&#x8981;1&#x4E2A;&#x5C0F;&#x65F6;&#x3002;&#x73B0;&#x5728;&#x6709;&#x82E5;&#x5E72;&#x6761;&#x6750;&#x8D28;&#x76F8;&#x540C;&#x7684;&#x7EF3;&#x5B50;&#xFF0C;&#x95EE;&#x5982;&#x4F55;&#x7528;&#x70E7;&#x7EF3;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x8BA1;&#x65F6;&#x4E00;&#x4E2A;&#x5C0F;&#x65F6;&#x5341;&#x4E94;&#x5206;&#x949F;&#x5462;</h4>
+</code></pre>
+<h4 id="&#x70E7;&#x4E00;&#x6839;&#x4E0D;&#x5747;&#x5300;&#x7684;&#x7EF3;&#xFF0C;&#x4ECE;&#x5934;&#x70E7;&#x5230;&#x5C3E;&#x603B;&#x5171;&#x9700;&#x8981;1&#x4E2A;&#x5C0F;&#x65F6;&#x3002;&#x73B0;&#x5728;&#x6709;&#x82E5;&#x5E72;&#x6761;&#x6750;&#x8D28;&#x76F8;&#x540C;&#x7684;&#x7EF3;&#x5B50;&#xFF0C;&#x95EE;&#x5982;&#x4F55;&#x7528;&#x70E7;&#x7EF3;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x8BA1;&#x65F6;&#x4E00;&#x4E2A;&#x5C0F;&#x65F6;&#x5341;&#x4E94;&#x5206;&#x949F;&#x5462;">&#x70E7;&#x4E00;&#x6839;&#x4E0D;&#x5747;&#x5300;&#x7684;&#x7EF3;&#xFF0C;&#x4ECE;&#x5934;&#x70E7;&#x5230;&#x5C3E;&#x603B;&#x5171;&#x9700;&#x8981;1&#x4E2A;&#x5C0F;&#x65F6;&#x3002;&#x73B0;&#x5728;&#x6709;&#x82E5;&#x5E72;&#x6761;&#x6750;&#x8D28;&#x76F8;&#x540C;&#x7684;&#x7EF3;&#x5B50;&#xFF0C;&#x95EE;&#x5982;&#x4F55;&#x7528;&#x70E7;&#x7EF3;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x8BA1;&#x65F6;&#x4E00;&#x4E2A;&#x5C0F;&#x65F6;&#x5341;&#x4E94;&#x5206;&#x949F;&#x5462;</h4>
 <p>&#x7528;&#x4E24;&#x6839;&#x7EF3;&#x5B50;&#xFF0C;&#x4E00;&#x4E2A;&#x7EF3;&#x5B50;&#x4E24;&#x5934;&#x70E7;&#xFF0C;&#x4E00;&#x4E2A;&#x4E00;&#x5934;&#x70E7;&#x3002; </p>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; www.jackywang.tech 2017 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2017-03-08 15:33:11
+2017-03-08 16:13:25
 </span></footer>
                                 
                                 </section>
@@ -1173,7 +1174,7 @@ ams:&#x7EDF;&#x4E00;&#x8C03;&#x5EA6;&#x5404;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"阿里巴巴","level":"1.5.3","depth":2,"next":{"title":"腾讯","level":"1.5.4","depth":2,"path":"chinese/subject/腾讯.md","ref":"chinese/subject/腾讯.md","articles":[]},"previous":{"title":"架构分析","level":"1.5.2","depth":2,"path":"chinese/subject/架构分析.md","ref":"chinese/subject/架构分析.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-plus","fontsettings","sharing","advanced-emoji@0.1.5","tbfed-pagefooter","donate","local-video","back-to-top-button@0.1.0","splitter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy www.jackywang.tech 2017","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"picture/alipay.jpeg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"picture/wechat.jpeg","wechatText":"微信打赏"},"fontsettings":{"family":"sans","size":2,"theme":"sepia"},"highlight":{},"back-to-top-button":{},"local-video":{},"advanced-emoji":{"myConfigKey":"test"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":true,"instapaper":true,"twitter":true,"vk":false,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Jacky","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"AndroidInterview","language":"zh-hans","gitbook":"*","description":"一线互联网面试题"},"file":{"path":"chinese/subject/阿里巴巴.md","mtime":"2017-03-08T07:33:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-08T07:38:07.911Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"阿里巴巴","level":"1.5.3","depth":2,"next":{"title":"腾讯","level":"1.5.4","depth":2,"path":"chinese/subject/腾讯.md","ref":"chinese/subject/腾讯.md","articles":[]},"previous":{"title":"架构分析","level":"1.5.2","depth":2,"path":"chinese/subject/架构分析.md","ref":"chinese/subject/架构分析.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-plus","fontsettings","sharing","advanced-emoji@0.1.5","tbfed-pagefooter","donate","local-video","back-to-top-button@0.1.0","splitter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy www.jackywang.tech 2017","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"picture/alipay.jpeg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"picture/wechat.jpeg","wechatText":"微信打赏"},"fontsettings":{"family":"sans","size":2,"theme":"sepia"},"highlight":{},"back-to-top-button":{},"local-video":{},"advanced-emoji":{"myConfigKey":"test"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":true,"instapaper":true,"twitter":true,"vk":false,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Jacky","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"AndroidInterview","language":"zh-hans","gitbook":"*","description":"一线互联网面试题"},"file":{"path":"chinese/subject/阿里巴巴.md","mtime":"2017-03-08T08:13:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-08T08:13:48.847Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
