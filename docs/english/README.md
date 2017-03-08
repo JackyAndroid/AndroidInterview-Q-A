@@ -2,8 +2,6 @@
 
 GitHub: https://github.com/JackyAndroid
 
-[中文版文档](https://github.com/JackyAndroid/AndroidInterview-Q-A/blob/master/README-CN.md)
-
 ---
 # AndroidInterview-Q-A
 Some of the questions (along with their answers) related to android and java asked in top notch companies.
