@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [简介](chinese/README.md)
 * [java基础](chinese/java.md)
-	* [接口的意义-百度](chinese/java/抽象类的意义-乐视.md)
+	* [接口的意义-百度](chinese/java/接口的意义-百度.md)
 	* [抽象类的意义-乐视](chinese/java/抽象类的意义-乐视.md)
 	* [内部类的作用-乐视](chinese/java/内部类的作用-乐视.md)
 	* [父类的静态方法能否被子类重写-猎豹](chinese/java/父类的静态方法能否被子类重写-猎豹.md)
