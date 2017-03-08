@@ -11,7 +11,7 @@
 	"sharing",
         "advanced-emoji@0.1.5",
         "tbfed-pagefooter",
-        "-donate",
+        "donate",
         "local-video",
         "back-to-top-button@0.1.0",
 	"splitter"
@@ -44,8 +44,8 @@
         },
                  
         "donate": {
-          "wechat": "",
-          "alipay": "",
+          "wechat": "picture/wechat.jpeg",
+          "alipay": "picture/alipay.jpeg",
           "title": "",
           "button": "赏",
           "alipayText": "支付宝打赏",
