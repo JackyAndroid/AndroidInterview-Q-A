@@ -1,0 +1,55 @@
+{
+    "title" : "AndroidInterview",
+    "description" : "一线互联网面试题",
+    "author" : "Jacky",
+    "generator": "site",
+    "language" : "zh-hans",
+    "plugins": [
+        "-search",
+        "search-plus",
+	"fontsettings",
+	"sharing",
+        "advanced-emoji@0.1.5",
+        "tbfed-pagefooter",
+        "-donate",
+        "local-video",
+        "back-to-top-button@0.1.0",
+	"splitter"
+    ],
+    "pluginsConfig": {
+	
+	"fontsettings": {
+            "theme": "sepia",
+            "family": "sans",
+            "size": 2
+	},
+        
+        "sharing": {
+            "weibo": true,
+            "facebook": true,
+            "twitter": true,
+            "google": true,
+            "instapaper": true,
+             "vk": false,
+            "all": [
+                "facebook", "google", "twitter",
+                "weibo", "instapaper"
+            ]
+        },
+        
+        "tbfed-pagefooter": {
+            "copyright":"Copyright &copy ifacetv.com 2017",
+            "modify_label": "该文件修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+                 
+        "donate": {
+          "wechat": "",
+          "alipay": "",
+          "title": "",
+          "button": "赏",
+          "alipayText": "支付宝打赏",
+          "wechatText": "微信打赏"
+        }        
+    }
+}

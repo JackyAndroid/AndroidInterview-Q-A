@@ -1,0 +1,8 @@
+/* adjusted for gitbook styling. original css from emojify.js */
+.emoji {
+  width: 1.3em;
+  height: 1.3em;
+  display: inline-block;
+  margin-bottom: 0.2em;
+  background-size: contain;
+}
