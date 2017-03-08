@@ -500,6 +500,7 @@ public static Singleton getInstance(){
   }
 }
 ```
+
 ####什么情况导致内存泄漏-美团
 
 1.资源对象没关闭造成的内存泄漏
