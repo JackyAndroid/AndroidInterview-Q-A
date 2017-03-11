@@ -70,3 +70,4 @@
 	* [网络](chinese/subject/网络.md)
 	* [数据库](chinese/subject/数据库.md)
 	* [图片](chinese/subject/图片.md)
+	* [算法](chinese/subject/算法.md)
