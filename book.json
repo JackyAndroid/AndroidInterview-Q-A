@@ -14,7 +14,8 @@
         "donate",
         "local-video",
         "back-to-top-button@0.1.0",
-	"splitter"
+	"splitter",
+	"edit-link"
     ],
     "pluginsConfig": {
 	
@@ -50,6 +51,11 @@
           "button": "赏",
           "alipayText": "支付宝打赏",
           "wechatText": "微信打赏"
-        }        
+        },
+
+	"edit-link": {
+           "base": "https://github.com/JackyAndroid/AndroidInterview-Q-A/edit/master",
+           "label": "编辑此页"
+        }
     }
 }
