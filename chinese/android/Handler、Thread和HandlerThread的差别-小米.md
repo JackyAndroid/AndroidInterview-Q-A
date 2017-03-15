@@ -1,5 +1,7 @@
 #### Handler,Thread和HandlerThread的差别-小米
 
+[探索 Android 大杀器—— Handler](https://github.com/xitu/gold-miner/blob/master/TODO/android-handler-internals.md)
+
 http://blog.csdn.net/guolin_blog/article/details/9991569
 
 http://droidyue.com/blog/2015/11/08/make-use-of-handlerthread/
