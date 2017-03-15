@@ -26,16 +26,16 @@
 	},
         
         "sharing": {
-            "weibo": true,
-            "facebook": true,
-            "twitter": true,
+	    "weibo": true,
+            "facebook": false,
+            "twitter": false,
             "google": true,
-            "instapaper": true,
-             "vk": false,
+            "instapaper": false,
+            "vk": false,
             "all": [
-                "facebook", "google", "twitter",
+             "facebook", "google", "twitter",
                 "weibo", "instapaper"
-            ]
+               ]
         },
         
         "tbfed-pagefooter": {
