@@ -1,3 +1,3 @@
-#### invalidate和postInvalidate的区别及使用-百度
+#### 从实例和源码角度理解 postInvalidate() 和 invalidate() 的区别与联系
 
-http://blog.csdn.net/mars2639/article/details/6650876
+http://blog.csdn.net/ziwang_/article/details/65690751
