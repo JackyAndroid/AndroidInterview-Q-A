@@ -15,7 +15,6 @@
 	* [进程和线程的区别-猎豹-美团](chinese/java/进程和线程的区别-猎豹-美团.md)
 	* [==和equals和hashCode的区别-乐视](chinese/java/==和equals和hashCode的区别-乐视.md)
 	* [HashMap的实现原理-美团](chinese/java/HashMap的实现原理-美团.md)
-	* [string-stringbuffer-stringbuilder区别-小米-乐视-百度](chienese/java/string-stringbuffer-stringbuilder区别-小米-乐视-百度.md)
 	* [java多态-乐视](chinese/java/java多态-乐视.md)
 	* [什么导致线程阻塞-58-美团](chinese/java/什么导致线程阻塞-58-美团.md)
 	* [并发编程-猎豹](chinese/java/并发编程-猎豹.md)
