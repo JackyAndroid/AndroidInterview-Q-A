@@ -1,10 +1,8 @@
 #### Handler,Thread和HandlerThread的差别-小米
-
-[探索 Android 大杀器—— Handler](https://github.com/xitu/gold-miner/blob/master/TODO/android-handler-internals.md)
-
-http://blog.csdn.net/guolin_blog/article/details/9991569
-
-http://droidyue.com/blog/2015/11/08/make-use-of-handlerthread/
+- [探索 Android 大杀器—— Handler](https://github.com/xitu/gold-miner/blob/master/TODO/android-handler-internals.md)
+- [Android异步消息处理机制完全解析，带你从源码的角度彻底理解](http://blog.csdn.net/guolin_blog/article/details/9991569)
+- [详解 Android 中的 HandlerThread](http://droidyue.com/blog/2015/11/08/make-use-of-handlerthread/)
+- [Android应用程序消息处理机制（Looper、Handler）分析](http://blog.csdn.net/luoshengyang/article/details/6817933)
 
 从Android中Thread（java.lang.Thread -> java.lang.Object）描述可以看出，Android的Thread没有对Java的Thread做任何封装，但是Android提供了一个继承自Thread的类HandlerThread（android.os.HandlerThread -> java.lang.Thread），这个类对Java的Thread做了很多便利Android系统的封装。
 

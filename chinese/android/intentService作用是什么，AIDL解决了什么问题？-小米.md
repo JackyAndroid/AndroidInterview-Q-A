@@ -1,5 +1,7 @@
 #### intentService作用是什么,AIDL解决了什么问题-小米
 
+[android跨进程通信（IPC）：使用AIDL](http://blog.csdn.net/singwhatiwanna/article/details/17041691)
+
 生成一个默认的且与主线程互相独立的工作者线程来执行所有传送至onStartCommand() 方法的Intetnt。
 
 生成一个工作队列来传送Intent对象给你的onHandleIntent()方法，同一时刻只传送一个Intent对象，这样一来，你就不必担心多线程的问题。在所有的请求(Intent)都被执行完以后会自动停止服务，所以，你不需要自己去调用stopSelf()方法来停止。
