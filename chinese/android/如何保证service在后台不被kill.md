@@ -11,11 +11,7 @@
 3. START_REDELIVER_INTENT
 在运行onStartCommand后service进程被kill后，系统将会再次启动service，并传入最后一个intent给onstartCommand。直到调用stopSelf(int)才停止传递intent。如果在被kill后还有未处理好的intent，那被kill后服务还是会自动启动。因此onstartCommand不会接收到任何null的intent。
 
-二、提升service优先级
-
-在AndroidManifest.xml文件中对于intent-filter可以通过android:priority = "1000"这个属性设置最高优先级，1000是最高值，如果数字越小则优先级越低，同时适用于广播。
-
-三、提升service进程优先级
+二、提升service进程优先级
 
 Android中的进程是托管的，当系统进程空间紧张的时候，会依照优先级自动进行进程的回收。Android将进程分为6个等级,它们按优先级顺序由高到低依次是:
 
@@ -28,12 +24,12 @@ Android中的进程是托管的，当系统进程空间紧张的时候，会依�
 
 当service运行在低内存的环境时，将会kill掉一些存在的进程。因此进程的优先级将会很重要，可以使用startForeground 将service放到前台状态。这样在低内存时被kill的几率会低一些。
 
-四、onDestroy方法里重启service
+三、onDestroy方法里重启service
 
 service +broadcast  方式，就是当service走ondestory的时候，发送一个自定义的广播，当收到广播的时候，重新启动service；
 
-五、Application加上Persistent属性
+四、Application加上Persistent属性
 
-六、监听系统广播判断Service状态
+五、监听系统广播判断Service状态
 
 通过系统的一些广播，比如：手机重启、界面唤醒、应用状态改变等等监听并捕获到，然后判断我们的Service是否还存活，别忘记加权限啊。

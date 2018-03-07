@@ -46,7 +46,6 @@
 	* [invalidate()和postInvalidate() 的区别及使用-百度](chinese/android/invalidate和postInvalidate的区别及使用-百度.md)
 	* [Android动画框架实现原理](chinese/android/Android动画框架实现原理.md)
 	* [Android为每个应用程序分配的内存大小是多少？-美团](chinese/android/Android为每个应用程序分配的内存大小是多少？-美团.md)
-	* [Android View刷新机制-百度-美团](chinese/android/Android View刷新机制-百度-美团.md)
 	* [LinearLayout对比RelativeLayout-百度](chinese/android/LinearLayout对比RelativeLayout-百度.md)
 	* [优化自定义view百度-乐视-小米](chinese/android/优化自定义view百度-乐视-小米.md)
 	* [ContentProvider-乐视](chinese/android/ContentProvider-乐视.md)
