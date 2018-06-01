@@ -19,6 +19,7 @@
 	* [java多态-乐视](chinese/java/java多态-乐视.md)
 	* [什么导致线程阻塞-58-美团](chinese/java/什么导致线程阻塞-58-美团.md)
 	* [并发编程-猎豹](chinese/java/并发编程-猎豹.md)
+	* [线程&线程池原理-腾讯](chinese/java/线程&线程池原理-腾讯.md)
 	* [抽象类接口区别-360](chinese/java/抽象类接口区别-360.md)
 	* [容器类之间的区别-乐视-美团](chinese/java/容器类之间的区别-乐视-美团.md)
 	* [内部类](chinese/java/内部类.md)
