@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [简介](chinese/README.md)
-* [java基础](chinese/java.md)
+* [Java](chinese/java.md)
 	* [接口的意义-百度](chinese/java/接口的意义-百度.md)
 	* [抽象类的意义-乐视](chinese/java/抽象类的意义-乐视.md)
 	* [内部类的作用-乐视](chinese/java/内部类的作用-乐视.md)
@@ -25,7 +25,7 @@
 	* [内部类](chinese/java/内部类.md)
 	* [hashmap和hashtable的区别-乐视-小米](chinese/java/hashmap和hashtable的区别-乐视-小米.md)
 	* [ArrayMap对比HashMap](chinese/java/ArrayMap对比HashMap.md)
-* [安卓]()
+* [Android]()
 	* [如何导入外部数据库](chinese/android/如何导入外部数据库.md)
 	* [本地广播和全局广播有什么差别](chinese/android/本地广播和全局广播有什么差别.md)
 	* [intentService作用是什么，AIDL解决了什么问题？-小米](chinese/android/intentService作用是什么，AIDL解决了什么问题？-小米.md)
@@ -58,6 +58,7 @@
 	* [Android属性动画特性-乐视-小米](chinese/android/Android属性动画特性-乐视-小米.md)
 
 * [专题]()
+	* [深入研究的知识点](chinese/subject/深入研究的知识点.md)
 	* [阿里巴巴](chinese/subject/阿里巴巴.md)
 	* [腾讯](chinese/subject/腾讯.md)
 	* [百度](chinese/subject/百度.md)
