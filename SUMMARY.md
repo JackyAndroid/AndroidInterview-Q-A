@@ -29,6 +29,7 @@
 	* [如何导入外部数据库](chinese/android/如何导入外部数据库.md)
 	* [本地广播和全局广播有什么差别](chinese/android/本地广播和全局广播有什么差别.md)
 	* [intentService作用是什么，AIDL解决了什么问题？-小米](chinese/android/intentService作用是什么，AIDL解决了什么问题？-小米.md)
+	* [进程间通讯机制Binder](chinese/android/进程间通讯机制Binder.md)
 	* [Activity,Window,View三者的差别，fragment的特点？-360](chinese/android/activity-window-view三者的差别-fragment的特点-360.md)
 	* [描述一次网络请求的流程-新浪](chinese/android/描述一次网络请求的流程-新浪.md)
 	* [Handler、Thread和HandlerThread的差别-小米](chinese/android/Handler、Thread和HandlerThread的差别-小米.md)
