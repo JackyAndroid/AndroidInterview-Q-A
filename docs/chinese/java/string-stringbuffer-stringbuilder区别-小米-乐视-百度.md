@@ -16,9 +16,9 @@ StringBuffer Sb = new StringBuffer("This is only a").append("simple").append("te
 ```
 
 你会很惊讶的发现，生成 String S1 对象的速度简直太快了，而这个时候 StringBuffer 居然速度上根本一点都不占优势。其实这是 JVM 的一个把戏，在 JVM 眼里，这个
- String S1 = “This is only a” + “ simple” + “test”; 其实就是：
- String S1 = “This is only a simple test”; 所以当然不需要太多的时间了。但大家这里要注意的是，如果你的字符串是来自另外的 String 对象的话，速度就没那么快了，譬如：
- String S2 = “This is only a”;
+ String S1 = “This is only a” + “ simple” + “test”; 其实就是：
+ String S1 = “This is only a simple test”; 所以当然不需要太多的时间了。但大家这里要注意的是，如果你的字符串是来自另外的 String 对象的话，速度就没那么快了，譬如：
+ String S2 = “This is only a”;
 String S3 = “ simple”;
 String S4 = “ test”;
 String S1 = S2 +S3 + S4;
