@@ -1,4 +1,3 @@
-_book/
 .sync/*
 
 .me_configs.data
@@ -10,3 +9,5 @@ sync_changes.log
 sync_hook.script
 
 **/.Archive
+
+node_modules/
