@@ -6,8 +6,6 @@
 
 [Online Doc | 在线文档](http://www.jackywang.tech/AndroidInterview-Q-A/)
 
-[English Doc](https://github.com/JackyAndroid/AndroidInterview-Q-A/tree/master/english)
-
-English version gitbook is coming soon..
+English doc is coming soon..
 
 ![](http://www.jackywang.tech/images/gongzh.png)
