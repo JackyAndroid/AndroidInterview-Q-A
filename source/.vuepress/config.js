@@ -6,7 +6,7 @@ module.exports = {
         '/': {
             lang: 'zh-CN',
             title: 'Android Interview',
-            description: '一线互联网面试题'
+            description: '一线互联网公司内部题库'
         }
     },
     serviceWorker: true,
@@ -30,7 +30,7 @@ module.exports = {
                     '/interview/': genSidebarConfig()
                 },
                 nav: [{
-                    text: 'Interview',
+                    text: '题库',
                     link: '/interview/',
                 }]
             }
