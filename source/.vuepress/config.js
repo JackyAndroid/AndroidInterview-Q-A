@@ -76,7 +76,7 @@ function genSidebarConfig() {
             title: 'Android',
             collapsable: true,
             children: [
-                '如何导入外部数据库',
+                '如何导入外部数据库-小米',
                 'intentService作用是什么，AIDL解决了什么问题？-小米',
                 'Android属性动画特性-乐视-小米',
                 '描述一次网络请求的流程-新浪',
