@@ -4,7 +4,7 @@
 
 [Github Repo](https://github.com/JackyAndroid/AndroidInterview-Q-A) welcome star | Github 仓库 欢迎star
 
-[Online Doc | 在线文档](http://www.jackywang.tech/AndroidInterview-Q-A/)
+[Online Doc | 在线文档](https://jackyandroid.github.io/AndroidInterview-Q-A/)
 
 English doc is coming soon..
 
