@@ -15,7 +15,7 @@ git commit -m 'deploy'
 
 git push -f git@github.com:JackyAndroid/AndroidInterview-Q-A.git master:gh-pages
 
-git push -f git@git.coding.net:JackyAndroid/AndroidInterview-Q-A.git master:coding-pages
+git push -f git@e.coding.net:JackyAndroid/AndroidInterview-Q-A.git master:coding-pages
 
 cd -
 
