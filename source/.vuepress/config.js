@@ -1,7 +1,7 @@
 module.exports = {
     description: 'The top Internet companies android interview questions and answers',
     dest: 'docs',
-    base: '/AndroidInterview-Q-A/',
+    base: '/',
     locales: {
         '/': {
             lang: 'zh-CN',
