@@ -7,5 +7,3 @@
 [Online Doc | 在线文档](https://interview-q-a-1gdnkgkla15afdbe-1258598664.tcloudbaseapp.com/)
 
 English doc is coming soon..
-
-![](http://www.jackywang.tech/images/gongzh.png)
