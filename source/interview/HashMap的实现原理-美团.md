@@ -1,5 +1,11 @@
 #### HashMap的实现原理-美团
-[Java HashMap工作原理及实现](https://yikun.github.io/2015/04/01/Java-HashMap%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E7%8E%B0/)
+[HashMap常见面试问题](https://www.cnblogs.com/youzhibing/p/11833040.html)
+
+##### [HashMap 中的取模和扩容公式推导](https://segmentfault.com/a/1190000039294622)
+
+[HashMap默认加载因子为什么选择0.75？](https://www.cnblogs.com/aspirant/p/11470928.html)
+
+[Java 8系列之重新认识HashMap](https://tech.meituan.com/2016/06/24/java-hashmap.html)
 
 [Map 综述（一）：彻头彻尾理解 HashMap](https://blog.csdn.net/justloveyou_/article/details/62893086)
 

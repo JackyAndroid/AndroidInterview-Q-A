@@ -102,6 +102,7 @@ function genSidebarConfig() {
                 'Glide源码解析',
                 '设计模式',
                 '架构设计-搜狐',
+                'Apk打包流程',
             ]
         },
         {
