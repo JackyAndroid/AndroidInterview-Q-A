@@ -71,7 +71,6 @@ function genSidebarConfig() {
             title: 'Android',
             collapsable: true,
             children: [
-                '如何导入外部数据库-小米',
                 'intentService作用是什么，AIDL解决了什么问题？-小米',
                 'Android属性动画特性-乐视-小米',
                 '描述一次网络请求的流程-新浪',
@@ -79,8 +78,7 @@ function genSidebarConfig() {
                 'launchmode应用场景-百度-小米-乐视',
                 'Touch事件传递流程-小米',
                 'view绘制流程-百度',
-                '多线程-360',
-                '线程同步-百度',
+                '屏幕刷新机制-腾讯',
                 '什么情况导致内存泄漏-美团',
                 '垃圾回收',
                 'ANR定位和修正',
