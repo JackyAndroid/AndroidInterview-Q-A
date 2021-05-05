@@ -96,6 +96,7 @@ function genSidebarConfig() {
                 '设计模式',
                 '架构设计-搜狐',
                 'Apk打包流程',
+                '常用Framework模块原理',
             ]
         },
         {

@@ -4,3 +4,4 @@
 - [Android应用程序内部启动Activity过程（startActivity）的源代码分析](https://blog.csdn.net/luoshengyang/article/details/6703247)
 - [startActivity启动过程分析](http://gityuan.com/2016/03/12/start-activity/)
 - [bindService启动过程分析](http://gityuan.com/2016/05/01/bind-service/)
+
