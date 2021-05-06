@@ -5,6 +5,7 @@
   },
   "scripts": {
     "serve": "vuepress dev source",
-    "build": "vuepress build source"
+    "build": "vuepress build source",
+    "nav": "vuepress nav source"
   }
 }

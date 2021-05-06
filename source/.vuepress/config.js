@@ -1,3 +1,5 @@
+const navConf = require("./nav.js");
+
 module.exports = {
     description: 'The top Internet companies android interview questions and answers',
     dest: 'docs',
@@ -13,7 +15,7 @@ module.exports = {
     plugins: {
         "vuepress-plugin-auto-sidebar": {
             sort: {
-                mode: "created_time_asc",
+                mode: "asc",
                 readmeFirst: true,
             },
             title: {
@@ -22,7 +24,7 @@ module.exports = {
             },
             sidebarDepth: 1,
             collapse: {
-                open: true,
+                open: false,
                 collapseList: [],
                 uncollapseList: []
             },
@@ -48,10 +50,11 @@ module.exports = {
                 // sidebar: {
                 //     // '/interview/': genSidebarConfig()
                 // },
-                nav: [{
-                    text: '题库',
-                    link: '/interview/',
-                }]
+                // nav: [{
+                //     text: '题库',
+                //     link: '/interview/',
+                // }]
+                nav: navConf
             }
         }
     }
