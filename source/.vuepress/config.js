@@ -10,6 +10,25 @@ module.exports = {
         }
     },
     serviceWorker: true,
+    plugins: {
+        "vuepress-plugin-auto-sidebar": {
+            sort: {
+                mode: "created_time_asc",
+                readmeFirst: true,
+            },
+            title: {
+                mode: "default",
+                map: {}
+            },
+            sidebarDepth: 1,
+            collapse: {
+                open: true,
+                collapseList: [],
+                uncollapseList: []
+            },
+            ignore: []
+        }
+    },
     themeConfig: {
         repo: 'https://github.com/JackyAndroid/AndroidInterview-Q-A',
         editLinks: true,
@@ -26,9 +45,9 @@ module.exports = {
                         buttonText: "刷新"
                     }
                 },
-                sidebar: {
-                    '/interview/': genSidebarConfig()
-                },
+                // sidebar: {
+                //     // '/interview/': genSidebarConfig()
+                // },
                 nav: [{
                     text: '题库',
                     link: '/interview/',
@@ -47,26 +66,26 @@ function genSidebarConfig() {
                 '',
             ]
         },
-        {
-            title: 'Java',
-            collapsable: true,
-            children: [
-                'java',
-                '父类的静态方法能否被子类重写-猎豹',
-                'java排序查找算法-美团',
-                '列举java的集合和继承关系-百度-美团',
-                '虚拟机-百度-乐视',
-                '内存模型',
-                '进程和线程的区别-猎豹-美团',
-                'HashMap的实现原理-美团',
-                'java多态-乐视',
-                '什么导致线程阻塞-58-美团',
-                '并发编程-猎豹',
-                '线程 线程池原理-腾讯',
-                '容器类之间的区别-乐视-美团',
-                'hashmap和hashtable的区别-乐视-小米',
-            ]
-        },
+        // {
+        //     title: 'Java',
+        //     collapsable: true,
+        //     children: [
+        //         'java',
+        //         '父类的静态方法能否被子类重写-猎豹',
+        //         'java排序查找算法-美团',
+        //         '列举java的集合和继承关系-百度-美团',
+        //         '虚拟机-百度-乐视',
+        //         '内存模型',
+        //         '进程和线程的区别-猎豹-美团',
+        //         'HashMap的实现原理-美团',
+        //         'java多态-乐视',
+        //         '什么导致线程阻塞-58-美团',
+        //         '并发编程-猎豹',
+        //         '线程 线程池原理-腾讯',
+        //         '容器类之间的区别-乐视-美团',
+        //         'hashmap和hashtable的区别-乐视-小米',
+        //     ]
+        // },
         {
             title: 'Android',
             collapsable: true,
@@ -118,3 +137,63 @@ function genSidebarConfig() {
         }
     ]
 }
+
+
+
+// module.exports = {
+//     themeConfig: {
+//         sidebar: {
+//             "/zh/guide/": [
+//                 {
+//                     title: "Markdown 增强",
+//                     icon: "markdown",
+//                     prefix: "markdown/",
+//                     collapsable: false,
+//                     children: [
+//                         "intro",
+//                         "components",
+//                         "align",
+//                         "sup-sub",
+//                         "footnote",
+//                         "mark",
+//                         "tex",
+//                         "flowchart",
+//                         "demo",
+//                         "presentation",
+//                         "external",
+//                     ],
+//                 },
+//                 {
+//                     title: "博客",
+//                     icon: "layout",
+//                     prefix: "blog/",
+//                     collapsable: false,
+//                     children: ["intro", "home", "category-and-tags"],
+//                 },
+//             ],
+
+//             "/zh/config/": [
+//                 {
+//                     title: "主题配置",
+//                     icon: "config",
+//                     prefix: "theme/",
+//                     collapsable: false,
+//                     children: ["", "default", "feature", "plugin", "apperance"],
+//                 },
+//                 "page",
+//                 "stylus",
+//                 {
+//                     title: "插件配置",
+//                     icon: "plugin",
+//                     prefix: "plugin/",
+//                     collapsable: false,
+//                     children: ["", "container", "copyright"],
+//                 },
+//             ],
+
+
+
+//             "/zh/": ["", "guide/", "config/", "basic/", "FAQ/", "demo/"],
+//         },
+//     },
+// };
