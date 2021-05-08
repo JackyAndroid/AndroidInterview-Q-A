@@ -14,3 +14,7 @@
 - [Android系统进程间通信（IPC）机制Binder中的Client获得Server远程接口过程源代码分析](https://blog.csdn.net/luoshengyang/article/details/6633311)
 - [Android系统进程间通信Binder机制在应用程序框架层的Java接口源代码分析](https://blog.csdn.net/luoshengyang/article/details/6642463)
 
+**Binder匿名共享内存原理**
+
+- [认真分析mmap：是什么 为什么 怎么用](https://www.cnblogs.com/huxiao-tee/p/4660352.html)
+- 回写时机：内存不足、进程crash、调用msync munmap、不设置 MAP_NOSYNC 情况下 30s-60s(仅限FreeBSD)
