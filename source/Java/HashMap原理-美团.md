@@ -1,13 +1,14 @@
 #### HashMap原理-美团
-```md
 ::: danger
+
 面试官：
+
 1. HashMap的数据结构是啥？有啥特点？
 2. 撞库如何处理，成树，成表？
 3. 扩容如何处理？
 4. 知道ArrayMap吗？SparseArray呢，有啥特点？ 
+
 :::
-```
 
 [HashMap常见面试问题](https://www.cnblogs.com/youzhibing/p/11833040.html)
 
