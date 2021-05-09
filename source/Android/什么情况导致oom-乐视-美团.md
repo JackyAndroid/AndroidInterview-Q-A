@@ -1,4 +1,4 @@
-#### 什么情况导致oom-乐视-美团
+#### 什么情况导致-乐视-美团
 
 [Android内存优化之OOM](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0920/3478.html)
 
