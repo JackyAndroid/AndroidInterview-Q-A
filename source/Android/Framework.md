@@ -11,8 +11,6 @@ AMS
 
 - [ActivityManagerService启动过程](http://gityuan.com/2016/02/21/activity-manager-service/)
 
-
-
 PMS
 
 - [Android包管理机制](http://liuwangshu.cn/tags/Android%E5%8C%85%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6/)
