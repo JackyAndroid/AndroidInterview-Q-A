@@ -6,4 +6,4 @@
 
 [Online Doc | 在线文档](https://interview-q-a-1gdnkgkla15afdbe-1258598664.tcloudbaseapp.com/)
 
-English doc is coming soon..
+[招聘](https://app.mokahr.com/apply/dayuwuxian/5092#/job/bedf9d89-a4da-4d73-b943-d734defc3264)，感兴趣请发邮箱：mahongli@mobiuspace.com
