@@ -13,7 +13,7 @@
 - [为什么 Android 要采用 Binder 作为 IPC 机制？](https://www.zhihu.com/question/39440766)
 
 - [说说你对 binder 驱动的了解？](https://zhuanlan.zhihu.com/p/152237289)
-- [写给-Android-应用工程师的-Binder-原理剖析](https://baronzhang.com/blog/Android/%E5%86%99%E7%BB%99-Android-%E5%BA%94%E7%94%A8%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84-Binder-%E5%8E%9F%E7%90%86%E8%A7%A3%E6%9E%90/)
+- [写给-Android-应用工程师的-Binder-原理剖析](https://zhuanlan.zhihu.com/p/35519585)
 
 **推荐**
 
