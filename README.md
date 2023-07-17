@@ -4,4 +4,4 @@
 
 [Github Repo](https://github.com/JackyAndroid/AndroidInterview-Q-A) welcome star | Github 仓库 欢迎star
 
-[Online Doc | 在线文档](https://interview-q-a-1gdnkgkla15afdbe-1258598664.tcloudbaseapp.com/)
+[Online Doc | 在线文档](https://jackyandroid.github.io/AndroidInterview-Q-A/)
