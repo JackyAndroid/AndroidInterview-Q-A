@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "vuepress": "1.5.4",
+    "vuepress": "^1.9.9",
     "vuepress-plugin-auto-sidebar": "^2.2.2"
   },
   "scripts": {

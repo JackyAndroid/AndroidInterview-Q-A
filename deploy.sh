@@ -3,11 +3,8 @@
 # 确保脚本抛出遇到的错误
 set -e
 
-# 生成文件 && 部署到腾讯云
-cloudbase framework:deploy
-
-# 发布生成的文件
-# cd docs
+# 生成静态文件
+yarn build
 
 # git init
 # git add -A
