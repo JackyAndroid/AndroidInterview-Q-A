@@ -3,7 +3,7 @@ const navConf = require("./nav.js");
 module.exports = {
     description: 'The top Internet companies android interview questions and answers',
     dest: 'docs',
-    base: '/AndroidInterview-Q-A',
+    base: '/AndroidInterview-Q-A/',
     locales: {
         '/': {
             lang: 'zh-CN',
