@@ -29,7 +29,7 @@ module.exports = {
                 uncollapseList: []
             },
             ignore: []
-        }
+        },
     },
     themeConfig: {
         repo: 'https://github.com/JackyAndroid/AndroidInterview-Q-A',
